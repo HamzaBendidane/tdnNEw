@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping 
+	xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" 
+	xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="TDN\Bundle\QuizBundle\Entity\Quiz"
+			repository-class="TDN\Bundle\QuizBundle\Entity\QuizRepository">
+
+		<field name="nombreQuestions" type="integer" column="nombre_questions" default="7" />
+		<field name="nombreProfils" type="integer" column="nombre_profils" default="4" />
+
+		<!-- Inverse de la relation (bi) Est une question du quiz : Ensemble de questions -->
+        <one-to-many field="questions" target-entity="QuestionQuiz" mapped-by="ln_quiz">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+            <order-by>
+                <order-by-field name="ordre" direction="DESC" />
+            </order-by>
+        </one-to-many>
+
+        <!-- Inverse de la relation (bi) Est un profil du quiz : Ensemble de profils -->
+		<one-to-many field="profils" target-entity="ProfilQuiz" mapped-by="ln_quiz">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
+
+        <!-- Inverse de la relation (bi) A participé au quiz : Ensemble de joueurs -->
+		<one-to-many field="resultats" target-entity="ResultatsQuiz" mapped-by="ln_quiz">
+            <cascade>
+                <cascade-persist/>
+            </cascade>
+        </one-to-many>
+	
+	</entity>
+	
+</doctrine-mapping>

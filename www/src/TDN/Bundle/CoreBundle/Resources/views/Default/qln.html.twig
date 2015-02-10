@@ -1,0 +1,40 @@
+{% extends 'TDNCoreBundle:Default:general.html.twig' %}
+{% block title %}Bienvenue sur Trucs De Nana{% endblock %}
+{%block col_G %}
+<article>
+	<h1>Questionne les nanas</h1>
+    <p>Les questions de nanas te permettent de demander l'avis des autres lectrices/-teurs sur un problème, une question que tu te poses, sur la thématique de ton choix: beauté, mode, minceur, couple, sexualité… Fais attention aux fautes d'orthographe et n'utilise pas le langage smz. Ta question sera validée par la rédaction avant d'être publiée.
+N'hésite pas à poster une image pour illustrer ta question.</p>
+	<div class="question">
+    	<h2>Pose ta question</h2>
+        <img src="#" />
+        <span>Pseudo (statut - age - escarpin)</span>
+        <span>Ecrit ta question ici…</span>
+       	<form>
+        	<label>Mon image</label>
+            <input type="file" name="image" value="Aucun fichier séléctionné" />
+            <input type="button" name="parcourir" value="Parcourir…"/>
+            <input type="text" name="legende" value="Ecrti une légende" />
+            <input type="text" name="rubrique" value="Choisis une "/>
+            <input type="submit" name="submit" value="Soumets ta question à la rédac' >" />
+            Si tu préfères, tu peux ausssi t'adresser directement à un expert TDN
+        </form>
+        render les 6 derieres questions de nanas avec filtre
+</article>
+{% endblock %}
+{% block col_D %}
+	<ul>
+    	<li>la recherche</li>
+    	<li>les Reseaux</li>
+        <li>la pub</li>
+        <li>la newsletter</li>
+        <li>dossiers</li>
+        <li>jeux concours</li>
+        <li>aller plus loin</li>
+        <li>a la une</li>
+        <li>dernier post "A la une"</li>
+        <li>btn FB</li>
+        <li>btn Inst</li>
+    </ul>
+{% endblock %}
+    

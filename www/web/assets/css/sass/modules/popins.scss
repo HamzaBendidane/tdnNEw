@@ -1,0 +1,9 @@
+#cboxLoadedContent {
+	
+	& > #selecteur_avatar,
+	& > .contenu-popin {
+		background-color: $vert-eau;
+		margin: 0.5rem 0;
+		padding: 1rem;
+	}
+}

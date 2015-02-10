@@ -1,0 +1,99 @@
+{% extends 'TDNCoreBundle:Topoi:TDNForm.html.twig' %}
+
+{% block title "Pose une question à un expert" %}
+
+{% block flashMessages %}
+  {% for flashMessage in app.session.flashbag.get('success') %}
+    <div class="flash-success">
+        {{ flashMessage }}
+    </div>
+  {% endfor %}
+{% endblock %}
+
+{% block corpsFormulaire %}
+<article id="article-wrapper" class="main article-redaction">
+
+  <div id="avertissement">
+    <p>Le but de TrucdeNana est de conseiller, aiguiller les internautes et livrer des astuces aux lectrices, des bons plans.</p>
+    <p>Tu peux poser une question à un expert dans la rubrique de ton choix et lui parler de ton problème avec sincérité, quel qu'il soit. Veille à ne pas faire de fautes d'orthographe ni à parler en langage sms. Tu obtiendras ta réponse dans les meilleurs délais.</p>
+</p>
+  </div>
+
+  <div id="form-demande fond-vert">
+    <h2 class="titreFormContribution">Quelle est ta question ?</h2>
+    <form name="demande-conseil-expert" id="formConseil" class="form-utilisateur constraintFile table-content" action="{{ path('ConseilExpert_creer_process') }}" method="post"  {{ form_enctype(form) }}>
+      <figure class="avatar col-lg-3">
+        <a href="{#{ path('NanaBundle_profil', {'id': TDNDocument.idNana}) }#}">
+          <img src="{{ avatar(nana) }}" alt="{{ nana.username }}" />
+        </a>
+      </figure>
+      <div class="fields col-lg-9">
+        <!-- Données personnelles de l'auteur de la question -->
+        <p class="signature-personnelle moyenne-signature">
+          <span class="auteur">
+            <a href="/profil/{{nana.idNana}}">{{ nana.username }}</a>
+          </span>
+          <span class="age">
+            {{ nana.dateNaissance|age }}
+          </span>
+          <span class="escarpins">{{ nana.popularite|stiletto|raw }}</span>
+        </p>
+        <div class="form-element">{{ form_widget(form.question, {'attr' : {'class': 'contribution'}}) }} </div>
+        <div class="form-element">
+          <div class="selecteur-fichier">
+            {{ form_row(form.lnImage.upload, {'attr' : {'class': 'bouton-upload'}}) }}
+          </div>
+          <span class="nom-fichier">Aucun fichier choisi</span>
+        </div>
+        <div class="form-element input-texte">
+          {{ form_row(form.lnImage.titre) }}
+        </div>
+        <div class="form-element selecteur">
+          {{ form_widget(formRubrique, {'attr' : {'class': ''}}) }}
+        </div>
+        {{ form_rest(form) }}
+        <div class="form-element">
+          <input type="submit" class="submitter" name="poster" value="Soumets ta question à la rédac’" style="float:right; margin-top:10px; margin-right:20px" />
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <p>Tu peux aussi <a href="{{ path('Causeuse_creer') }}">t'adresser à à la communauté des nanas</a> pour lui poser ta question, si tu préfères.</p>
+</section>
+</article>
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    $(".constraintFile").submit(function(event) {
+      var obj = $(this).find('[type="file"]');
+      var fichier = obj['0'].files[0];
+      console.log(fichier);
+      if (fichier.size > 2*1024*1024) {
+        event.preventDefault();
+        alert("Ton image est trop volumineuse");
+      } else {
+        var mimeType = fichier.type;
+        var types = mimeType.match(/(\w+)\/(\w+)/);
+        console.log(types);
+        if (types[1] !== 'image') {
+          event.preventDefault();
+          alert('Ce fichier n’est pas une image');
+        } else if (['png','gif','jpeg','jpg','svg'].indexOf(types[2]) === -1) {
+          event.preventDefault();
+          alert('Ce fichier n’est pas un dans un format lisible : '+types[2]);
+        }
+      }
+    });
+
+    $('.bouton-upload').on('change', function () {
+      console.log($(this).val());
+      var cible = $(this).parent().parent().siblings('.nom-fichier');
+      console.log(cible);
+      cible.html($(this).val());
+      cible.css('color', '#333');
+    })
+
+  });
+</script>
+{% endblock %}

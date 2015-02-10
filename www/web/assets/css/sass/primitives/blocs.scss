@@ -1,0 +1,57 @@
+@mixin bloc-vert {
+	background-color: $vert-eau;
+	border-radius: 4px;
+	clear: both;
+	padding: 10px;
+}
+
+.lineaire {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.par-4 {
+	display: inline-block;
+	margin: 0 0.5rem;
+	vertical-align: top;
+	width: calc(25% - 1.2rem);
+}
+
+.par-3,
+.par-videos,
+.par-concours {
+	display: inline-block;
+	margin: 0 0.5rem;
+	vertical-align: top;
+	width: calc(33.3% - 1.2rem);
+}
+
+@media (min-width: 768px) {
+	.par-2,
+	.par-articles,
+	.par-conseils,
+	.par-questions {
+		display: inline-block;
+		margin: 0 0.5rem;
+		vertical-align: top;
+		width: calc(50% - 1.2rem);
+	}	
+}
+@media (max-width: 768px) {
+	.par-2,
+	.par-articles,
+	.par-conseils,
+	.par-questions {
+		display: inline-block;
+		margin: 0 0.5rem;
+		vertical-align: top;
+		width: calc(100% - 1.2rem);
+	}
+}
+
+.titre-inline {
+	
+	h2 {
+		clear: none;
+	}
+}

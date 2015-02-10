@@ -1,0 +1,60 @@
+tdn_advertise:
+    resource: "@TDNAdvertiseBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_video:
+    resource: "@TDNVideoBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_redaction:
+    resource: "@TDNRedactionBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_quiz:
+    resource: "@TDNQuizBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_produit:
+    resource: "@TDNProduitBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_dossier_redaction:
+    resource: "@TDNDossierRedactionBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_conseil_expert:
+    resource: "@TDNConseilExpertBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_causeuse:
+    resource: "@TDNCauseuseBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_concours:
+    resource: "@TDNConcoursBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_newsletter:
+    resource: "@TDNNewsletterBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_nana:
+    resource: "@TDNNanaBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_commentaire:
+    resource: "@TDNCommentaireBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_image:
+    resource: "@TDNImageBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_document:
+    resource: "@TDNDocumentBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tdn_core:
+    resource: "@TDNCoreBundle/Resources/config/routing.xml"
+    prefix:   /
+

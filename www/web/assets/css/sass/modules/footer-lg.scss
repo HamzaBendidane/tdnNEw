@@ -1,0 +1,30 @@
+footer.appendices {
+	@include boite-arrondie-haut(10px);
+	background-color: $violet-tdn;
+	padding-left: 10px;
+	padding-top: 10px;
+
+	.droits {
+		font-size: 0.8em;
+		text-align: center;
+	}
+
+	h4 {
+		color: #A9E7E5;
+		font: 0.8em "Droid Sans",Helvetica,sans-serif;
+		text-transform: uppercase;
+	}
+
+	.colonne-footer {
+		ul {
+			color: #EAA6E9;
+			font-size: 0.8em;
+			
+		}
+		
+		&:not(:last-child) {
+			border-right: 1px dashed #A098BE;
+		}
+	}
+
+}

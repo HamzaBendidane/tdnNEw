@@ -1,0 +1,119 @@
+label:not([for]) {
+	color: #999;
+}
+
+#donneesPersonnelles {
+	background-color: $vert-eau;
+	border-radius: 6px;
+	margin-bottom: 1rem;
+
+	label {
+		font-size: 0.8rem;
+		font-weight: 400;
+		color: $vert-soutenu;
+	}
+
+	.champ-profil {
+
+		label {
+			color: #444;
+		} 
+	}
+}
+
+.avatar-switcher {
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.menu-profil {
+	display: inline-block;
+	border-bottom: 1px solid $vert-tdn;
+	list-style: none;
+	margin-bottom: 1rem;
+	padding-left: 0;
+	position: relative;
+	width: calc(100% - 60px);
+
+	li {
+		display: inline-block;
+		padding : 10px 15px;
+	}
+
+	.item-profil {
+		background-color: $blanc;
+		border-radius: 16px 16px 0 0;
+		position: relative;		
+	}
+
+	.affiche {
+		border: 1px solid $vert-tdn;
+		border-bottom: 0;
+		top: 1px;
+	}
+
+	.item-profil:not(.affiche):hover {
+		background-color: $vert-eau
+	}
+
+	.item-preview {
+		position: absolute;
+		right: 0;
+	}
+}
+
+.champ-profil {
+	border: 1px solid $vert-eau;
+	border-radius: 6px;
+}
+
+.champ-bloc {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.champ-tableau {
+	display: table;
+	margin-bottom: 1rem;
+
+	& > div {
+		display: table-row;
+
+		& > label,
+		& > input {
+			display: table-cell;
+			padding: 0 0.5rem;
+		}
+
+		& > input {
+			border: 1px solid $vert-eau;
+			border-radius: 6px;
+		}
+	}
+}
+
+.champ-radio {
+	margin-bottom: 1rem;
+
+	& > label {
+		display: inline-block;
+		margin-right: 3rem;
+	}
+
+	& > input {
+		margin: 0 0.5rem;
+	}
+}
+
+.champ-date {
+	margin-bottom: 1rem;
+
+	& > select {
+		display: inline-block;
+		margin: 0 2rem 0 0.5rem;
+	}
+}
+
+.formulaire-hobby {
+	margin: 4rem 0; 
+}

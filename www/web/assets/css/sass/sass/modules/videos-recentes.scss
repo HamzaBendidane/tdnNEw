@@ -1,0 +1,59 @@
+.videosRecentes .snapshot {
+	border: 4px solid #EFEFEF;
+	margin: 8px 4px;
+	width: calc(20% - 16px);
+}
+
+.videosToutes {
+	color: $violet-tdn;
+	text-align: right;
+	margin: 1rem;
+}
+
+#videos-recentes .scene {
+	position: absolute;
+	top: 40px;
+	left: 325px;
+
+	.rubriqueMarqueur:before {
+		height: 80px;
+		width: 80px;
+	}
+
+	.lecteur {
+		left: 7px;
+		position:relative;
+		top: 5px;
+		z-index:10;
+	}
+}
+
+.fleche-droite:after {
+	@include sprite(20px, 20px);
+}
+
+.plus-lus {
+
+	min-height: 100px;
+
+	&:not(:first-child) {
+		padding: 0.5rem 0;
+	}
+}
+
+.enveloppe-video {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0;
+}
+ 
+.enveloppe-video iframe,
+.enveloppe-video object,
+.enveloppe-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

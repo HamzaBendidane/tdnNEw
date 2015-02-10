@@ -1,0 +1,51 @@
+{% extends 'TDNCoreBundle:Default:general.html.twig' %}
+{% block title %}{{ mainCat }}{% endblock %}
+{%block col_G %}
+<article>
+    <span>fil>d'ariane</span>
+    <h1>{{ mainCat }}</h1>
+    <div>
+    	<h2>Conseils D'expert</h2>
+        {% render "ConseilExpertBundle:#" with {'limite': 4} %}
+			
+   </div>
+   <div>
+    	<h2>Questions de Nanas</h2>
+        {% render "QuestionsNanaBundle:#" with {'limite': 2} %}
+   </div>
+   <div>
+    	<h2>Post de la redac'</h2>
+        {% render "ConseilExpertBundle:#" with {'limite': 4} %}
+   </div>
+   <div>
+    	<h2>Coups de coeur shopping</h2>
+        {% render "ShoppingBundle:#" with {'limite': 4} %}
+   </div>
+   <div>
+    	<h2>Ca cartonne sur TDN</h2>
+       {% render "RedactionBundle:#" with {'limite': 4} %}
+   </div>
+   <div>
+    	<h2>Vidéos</h2>
+      	{% render "VideoBundle:#" with {'limite': 4} %}
+   </div>
+{% endblock %}
+{% block actu_Com %}
+   <div class="col-lg-12">
+    	<h2>Actus Communauté</h2>
+        <p>TDN en Direct</p>
+        <p>Les Membres</p>
+   </div>
+</article>
+{% endblock %}
+{% block col_D %}
+	<ul>
+		<li>la recherche</li>
+		<li>la newsletter</li>
+		<li>les Reseaux</li>
+		<li>fil FB</li>
+		<li>fil Tw</li>
+		<li>fil Inst</li>
+	</ul>
+{% endblock %}
+    

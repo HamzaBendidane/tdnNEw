@@ -1,0 +1,20 @@
+.diapo-active {
+	display: block;
+}
+
+.diapo-masquee {
+	display: none;
+}
+
+#cahier-feuillets {
+
+	.abstract-feuillet {
+		clear: both;
+	}
+	
+	.vignette {
+		float: left;
+		margin-right: 20px;
+		max-width: 150px;
+	}
+}

@@ -1,0 +1,354 @@
+/* line 3, ../sass/color.scss */
+#inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 4px 10px;
+  background: red;
+  color: white;
+}
+
+/* color texte */
+/* line 23, ../sass/color.scss */
+.c1 .c2 {
+  color: #006699;
+}
+
+/* line 28, ../sass/color.scss */
+.a-la-une_texte {
+  color: #ff9900;
+}
+
+/* line 32, ../sass/color.scss */
+.beaute_texte {
+  color: #ff6699;
+}
+
+/* line 35, ../sass/color.scss */
+.deco_texte {
+  color: #006699;
+}
+
+/* line 38, ../sass/color.scss */
+.geekette_texte {
+  color: #666;
+}
+
+/* line 41, ../sass/color.scss */
+.mode_texte {
+  color: #33ccff;
+}
+
+/* line 44, ../sass/color.scss */
+.bien-etre_texte {
+  color: #00cc66;
+}
+
+/* line 47, ../sass/color.scss */
+.sexo-psycho_texte {
+  color: #ff3300;
+}
+
+/* line 50, ../sass/color.scss */
+.recettes_texte {
+  color: #a27951;
+}
+
+/* line 53, ../sass/color.scss */
+.gris_texte {
+  color: #f1f5fa;
+}
+
+/* line 56, ../sass/color.scss */
+.footer_texte {
+  color: #A9E7E5;
+}
+
+/* line 59, ../sass/color.scss */
+.footer_tdn_texte {
+  color: #A098BE;
+}
+
+/* line 62, ../sass/color.scss */
+.mytdn_texte {
+  color: #24ACAD;
+}
+
+/* line 65, ../sass/color.scss */
+.default_texte {
+  color: #48585E;
+}
+
+/* line 68, ../sass/color.scss */
+.vert_texte {
+  color: #448A8A;
+}
+
+/* color background */
+/* line 73, ../sass/color.scss */
+.texte_gris {
+  background-color: #f1f5fa;
+}
+
+/* line 76, ../sass/color.scss */
+.texte_footer {
+  background-color: #A9E7E5;
+}
+
+/* line 79, ../sass/color.scss */
+.texte_footer_tdn {
+  background-color: #A098BE;
+}
+
+/* line 82, ../sass/color.scss */
+.texte_mytdn {
+  background-color: #24ACAD;
+}
+
+/* line 85, ../sass/color.scss */
+.texte_noir {
+  background-color: #000;
+}
+
+/* line 88, ../sass/color.scss */
+.texte_vert {
+  background-color: #448A8A;
+}
+
+/* line 92, ../sass/color.scss */
+.a-la-une_principale {
+  background-color: #ff9900;
+}
+
+/* line 95, ../sass/color.scss */
+.coin_a-la-une:before {
+  background-color: #ff9900;
+}
+
+/* line 98, ../sass/color.scss */
+.a-la-une_secondaire {
+  background-color: #ffefd6;
+}
+
+/* line 111, ../sass/color.scss */
+.beaute_principale {
+  background-color: #ff6699;
+}
+
+/* line 114, ../sass/color.scss */
+.coin_beaute:before {
+  background-color: #ff6699;
+}
+
+/* line 117, ../sass/color.scss */
+.beaute_secondaire {
+  background-color: #ffe5ed;
+}
+
+/* line 121, ../sass/color.scss */
+.deco_principale {
+  background-color: #006699;
+}
+
+/* line 124, ../sass/color.scss */
+.coin_deco:before {
+  background-color: #006699;
+}
+
+/* line 127, ../sass/color.scss */
+.deco_secondaire {
+  background-color: #d4e5ee;
+}
+
+/* line 131, ../sass/color.scss */
+.geekette_principale {
+  background-color: #666;
+}
+
+/* line 134, ../sass/color.scss */
+.coin_geekette:before {
+  background-color: #666;
+}
+
+/* line 137, ../sass/color.scss */
+.geekette_secondaire {
+  background-color: #eee;
+}
+
+/* line 141, ../sass/color.scss */
+.mode_principale {
+  background-color: #33ccff;
+}
+
+/* line 144, ../sass/color.scss */
+.coin_mode:before {
+  background-color: #33ccff;
+}
+
+/* line 147, ../sass/color.scss */
+.mode_secondaire {
+  background-color: #ddf6ff;
+}
+
+/* line 151, ../sass/color.scss */
+.bien-etre_principale {
+  background-color: #00cc66;
+}
+
+/* line 154, ../sass/color.scss */
+.coin_bien-etre:before {
+  background-color: #00cc66;
+}
+
+/* line 157, ../sass/color.scss */
+.bien-etre_secondaire {
+  background-color: #a6edca;
+}
+
+/* line 161, ../sass/color.scss */
+.sexo-psycho_principale {
+  background-color: #ff3300;
+}
+
+/* line 164, ../sass/color.scss */
+.coin_sexo-psycho:before {
+  background-color: #ff3300;
+}
+
+/* line 167, ../sass/color.scss */
+.sexo-psycho_secondaire {
+  background-color: #ffded6;
+}
+
+/* line 171, ../sass/color.scss */
+.recettes_principale {
+  background-color: #a27951;
+}
+
+/* line 174, ../sass/color.scss */
+.coin_recettes:before {
+  background-color: #a27951;
+}
+
+/* line 177, ../sass/color.scss */
+.recettes_secondaire {
+  background-color: #e2d5c6;
+}
+
+/* color bordures*/
+/* line 183, ../sass/color.scss */
+.bordure_bleu {
+  border: 2px solid #1dbfb9;
+}
+
+/* line 186, ../sass/color.scss */
+.bordure_rose {
+  border: 2px solid #FF91FF;
+}
+
+/* color degrades */
+/* line 191, ../sass/color.scss */
+.degrade1 {
+  background-image: linear-gradient(top, #c8efee 0%, #eff7f7 54%);
+  background-image: -o-linear-gradient(top, #c8efee 0%, #eff7f7 54%);
+  background-image: -moz-linear-gradient(top, #c8efee 0%, #eff7f7 54%);
+  background-image: -webkit-linear-gradient(top, #c8efee 0%, #eff7f7 54%);
+  background-image: -ms-linear-gradient(top, #c8efee 0%, #eff7f7 54%);
+  background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0, #c8efee), color-stop(0.54, #eff7f7));
+}
+
+/* line 199, ../sass/color.scss */
+.degrade2 {
+  background-image: linear-gradient(top, #93117d 30%, #660e5c 100%);
+  background-image: -o-linear-gradient(top, #93117d 30%, #660e5c 100%);
+  background-image: -moz-linear-gradient(top, #93117d 30%, #660e5c 100%);
+  background-image: -webkit-linear-gradient(top, #93117d 30%, #660e5c 100%);
+  background-image: -ms-linear-gradient(top, #93117d 30%, #660e5c 100%);
+  background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0.3, #93117d), color-stop(1, #660e5c));
+}
+
+/* line 208, ../sass/color.scss */
+.degrade3 {
+  background-image: linear-gradient(top, #98e3e1 18%, #e6eaec 62%);
+  background-image: -o-linear-gradient(top, #98e3e1 18%, #e6eaec 62%);
+  background-image: -moz-linear-gradient(top, #98e3e1 18%, #e6eaec 62%);
+  background-image: -webkit-linear-gradient(top, #98e3e1 18%, #e6eaec 62%);
+  background-image: -ms-linear-gradient(top, #98e3e1 18%, #e6eaec 62%);
+  background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0.18, #98e3e1), color-stop(0.62, #e6eaec));
+}
+
+/* color bloc */
+/* line 218, ../sass/color.scss */
+.bloc_centre {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #C8D1D5;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0px 1px 2px #B6EBE9;
+}
+
+/* line 224, ../sass/color.scss */
+.bloc_communaute1 {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 2px solid #98E3E0;
+  box-shadow: 0px 1px 2px #8F117C;
+}
+
+/* line 229, ../sass/color.scss */
+.bloc_communaute2 {
+  background-image: linear-gradient(left top, #52a3a3 30%, #99cccc 90%);
+  background-image: -o-linear-gradient(left top, #52a3a3 30%, #99cccc 90%);
+  background-image: -moz-linear-gradient(left top, #52a3a3 30%, #99cccc 90%);
+  background-image: -webkit-linear-gradient(left top, #52a3a3 30%, #99cccc 90%);
+  background-image: -ms-linear-gradient(left top, #52a3a3 30%, #99cccc 90%);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.3, #52a3a3), color-stop(0.9, #99cccc));
+  border: 5px solid #B9ECEA;
+  box-shadow: 0px 1px 2px #8F117C;
+}
+
+/* autres */
+/* line 240, ../sass/color.scss */
+.votes {
+  color: #8D0000;
+  border: 1px solid #8D0000;
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px;
+  min-width: 20px;
+  font-weight: bold;
+}
+
+/* line 249, ../sass/color.scss */
+.reponses {
+  color: #339900;
+  border: 1px solid #339900;
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px;
+  min-width: 20px;
+  font-weight: bold;
+}
+
+/* line 258, ../sass/color.scss */
+.ligne_separatrice {
+  background-color: #89DFDC;
+}
+
+/* color liens */
+/* line 262, ../sass/color.scss */
+.lien_footer {
+  background-color: #EAA6E9;
+}
+
+/* line 265, ../sass/color.scss */
+.lien_default {
+  background-color: #752670;
+}
+
+/* line 268, ../sass/color.scss */
+.lien_mytdn {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+}

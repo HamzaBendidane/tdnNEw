@@ -1,0 +1,124 @@
+.form-colonnes {
+		display: table;
+		width: 100%;
+
+		.colonne {
+			/*display: table-cell;*/
+		}
+
+		.uploader {
+
+			label {
+				color: #666;
+				font-weight: normal;
+				padding-right: 1rem;
+			}
+
+			input[type="file"] {
+				display: inline-block;
+			}
+		}
+	}
+
+
+.contribution {
+	@include cadre-bulle-violette;
+	margin: 1rem 0;
+	width: 100%;
+	height: 60px;
+}
+
+
+.form-element {
+	clear: both;
+	margin: 0.3rem 0;
+
+	.nom-fichier {
+		color: #AAA;
+	}
+}
+
+.submitter {
+	background-color: $violet-secondaire;
+	border: 0px none;
+	border-radius: 4px;
+	color: $blanc;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.fer-a-droite {
+	margin: 1rem;
+	text-align: right;
+}
+
+.form-utilisateur {
+	background-color: $vert-eau;
+	overflow: auto;
+	padding: 1rem;
+
+	label {
+		font-weight: normal;
+		line-height: auto;
+		margin-right: 1rem;
+	}
+
+	input {
+		border: 1px solid $vert-tdn;
+	}
+
+	.selecteur {
+		border-radius: 4px;
+		border: 1px solid $vert-tdn;
+		float: right;
+		position: relative;
+		right: 20px;
+
+		label {
+			position: absolute;
+			width: 177px;
+			height: 23px;
+			color: #000;
+			overflow: hidden;
+			background-color: $blanc;
+			background-image: url('/assets/images/theme/forms/select-sommaire_177x23.png');
+			background-repeat: no-repeat;
+			padding: 0px 24px 0px 8px;
+			font-size: 12px;
+			line-height: 23px;
+		}
+
+		select {
+			position: relative;
+			width: 177px;
+			opacity: 0;
+			z-index: 5;
+		}
+	}
+
+	.selecteur-fichier {
+		background-color: $vert-tdn;
+		border-radius: 4px;
+		color: $anthracite;
+		cursor: pointer;
+		display: inline-block;
+		margin: 10px;
+		overflow: hidden;
+		padding: 0.2rem 0 0 1rem;
+		position: relative;
+		vertical-align: middle;
+		width: 163px;
+
+		input[type="file"] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+	}
+}

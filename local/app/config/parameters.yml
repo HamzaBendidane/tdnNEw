@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: tdn3_audrey_dev
+    database_user: trucdenana
+    database_password: ju75via
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: 139187537036256ec3c95402902c7109d1f213c3
+    database_path: null

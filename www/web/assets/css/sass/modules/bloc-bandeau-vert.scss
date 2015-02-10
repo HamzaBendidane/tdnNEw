@@ -1,0 +1,145 @@
+.bloc-bandeau {
+
+	margin: 1rem 0;
+	position: relative;
+
+	article {
+		background-color: $blanc;
+		border-radius: 4px;
+		clear: both;
+		margin: 0.5rem;
+		overflow: auto;
+		padding: 0.5rem;
+
+		&.contenu-replie {
+			height: 0;
+			margin: 0;
+			padding: 0;
+			transition: all 0.2s cubic-bezier(0.26, 0.06, 0.3, 0.76) 0s;
+		}
+
+		&.contenu-decouvert {
+			height: auto;
+			margin: 0.5rem;
+			padding: 0.5rem;
+			transition: all 0.2s cubic-bezier(0.26, 0.06, 0.3, 0.76) 0s;
+		}
+	}
+
+	.bandeau {
+		@include boite-arrondie-haut(10px);
+		padding-left: 6px;
+		position: relative;
+
+	}
+
+	h1,
+	h3 {
+		margin: 1rem 0 0.5rem 100px;
+	}
+
+	.apropos {
+		float: right;
+		margin: 1.5rem 1rem 0.5rem 0;
+
+		.n-reponses:before {
+			@include sprite(30px, 30px);
+			background-position: -575px -150px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+		}
+
+		.n-votes:before {
+			@include sprite(30px, 30px);
+			background-position: -610px -150px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+		}
+	}
+
+	.accroche-article {
+
+		h1 {
+			font-variant: small-caps;
+			font-size: 2rem;
+		}
+	}
+
+	.hot {
+		background-color: $vert-eau;
+		padding: 1rem 0 0.5rem;
+	}
+}
+
+.en-scene {
+
+	@each $document in (article, conseil-expert, question, video) {
+
+		.widget-liste-#{$document} {
+
+			h3:before {
+				@include sprite-lg;
+				@extend %icone-#{$document}-trombone;
+			}
+
+			h1:before {
+				@include sprite-lg;
+				@extend %icone-#{$document}-bordered-md;
+				top: 5px;
+				left: 15px;
+			}
+		}
+	}
+}
+
+.annexes {
+
+	@each $document in (article, concours, dossier) {
+
+		.widget-liste-#{$document} {
+
+			h3:before {
+				@include sprite-lg;
+				@extend %icone-#{$document}-vert;
+			}
+		}
+	}
+}
+
+.cascadeTags {
+	clear: both;
+
+	.tagBag {
+		list-style-type: none;
+		padding: 0 0 1rem 1rem;
+		margin-bottom: 0;
+
+		.tag {
+			color: #CCC;
+			display: inline-block;
+		}
+
+		.tag:not(:last-of-type):after {
+			color: #EEE;
+			content: "•";
+		}
+	}
+}
+
+.bloc-aime {
+
+	.meta {
+		font-size: 0.8rem;
+		line-height: 1;
+	}
+
+	.apercuTexte {
+		font-size: 0.8rem;
+	}
+}
+
+.no-elements {
+	opacity: 0.5;
+}

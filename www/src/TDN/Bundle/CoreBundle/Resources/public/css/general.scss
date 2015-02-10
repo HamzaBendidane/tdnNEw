@@ -1,0 +1,158 @@
+@import url(reset.css);
+@import url(sprite.css);
+
+body {
+  background-color: #e8f9f8;
+  border-top: solid #9b0083 3px; }
+
+.tiroir {
+  background-color: #960080;
+  height: auto; }
+
+.pub-h {
+  height: 90px;
+  margin: 40px 0;
+  background-color: #777777; }
+
+.blanc {
+  background-color: white;
+  padding: 0 10px 0 10px; }
+
+h3 {
+  background-color: #96d8dc; }
+
+.point {
+  background-color: white;
+  border-bottom: dotted #96d8dc 2px; }
+
+.bmenu {
+  border-bottom: solid #9b0083 1.5px; }
+
+.menu_h_mobile {
+  height: 85px;
+  background: #FFF;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 100; }
+
+.adjuste {
+  height: 85px;
+  background-color: #9b0083;
+  z-index: 10; }
+
+.fixe {
+  position: fixed; }
+
+ul.rubriques {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 50px; }
+
+.rubriques li {
+  list-style: none;
+  background-color: white; }
+
+.alaune {
+  color: #ff9900; }
+.alaune a:link {
+  color: #ff9900; }
+.alaune a:visited {
+  color: #ff9900;
+  background-color: #ffefd6; }
+.alaune a:hover {
+  color: #FFF;
+  background-color: #ff9900; }
+.alaune a:active {
+  color: #ff9900; }
+
+.beaute {
+  color: #ff6699; }
+.beaute a:link {
+  color: #ff6699; }
+.beaute a:visited {
+  color: #ff6699;
+  background-color: #ffe5ed; }
+.beaute a:hover {
+  color: #FFF;
+  background-color: #ff6699; }
+.beaute a:active {
+  color: #ff6699; }
+
+.mode {
+  color: #33ccff; }
+.mode a:link {
+  color: #33ccff; }
+.mode a:visited {
+  color: #33ccff;
+  background-color: #ddf6ff; }
+.mode a:hover {
+  color: #FFF;
+  background-color: #33ccff; }
+.mode a:active {
+  color: #33ccff; }
+
+.geek {
+  color: #666666; }
+.geek a:link {
+  color: #666666; }
+.geek a:visited {
+  color: #666666;
+  background-color: #eeeeee; }
+.geek a:hover {
+  color: #FFF;
+  background-color: #666666; }
+.geek a:active {
+  color: #666666; }
+
+.deco {
+  color: #006699; }
+.deco a:link {
+  color: #006699; }
+.deco a:visited {
+  color: #006699;
+  background-color: #d4e5ee; }
+.deco a:hover {
+  color: #FFF;
+  background-color: #006699; }
+.deco a:active {
+  color: #006699; }
+
+.recette {
+  color: #a27951; }
+.recette a:link {
+  color: #a27951; }
+.recette a:visited {
+  color: #a27951;
+  background-color: #e2d5c6; }
+.recette a:hover {
+  color: #FFF;
+  background-color: #a27951; }
+.recette a:active {
+  color: #a27951; }
+
+.sexo {
+  color: #ff3300; }
+.sexo a:link {
+  color: #ff3300; }
+.sexo a:visited {
+  color: #ff3300;
+  background-color: #ffded6; }
+.sexo a:hover {
+  color: #FFF;
+  background-color: #ff3300; }
+.sexo a:active {
+  color: #ff3300; }
+
+.bienetre {
+  color: #00cc66; }
+.bienetre a:link {
+  color: #00cc66; }
+.bienetre a:visited {
+  color: #00cc66;
+  background-color: #a6edca; }
+.bienetre a:hover {
+  color: #FFF;
+  background-color: #00cc66; }
+.bienetre a:active {
+  color: #00cc66; }

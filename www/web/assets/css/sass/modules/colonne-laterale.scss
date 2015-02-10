@@ -1,0 +1,86 @@
+.bloc-recherche {
+
+	.recherche-rapide {
+		@include boite-arrondie-bas(10px);
+		background-color: $violet-tdn;
+
+		form#recherche {
+			font-size: 0.8rem;
+			padding: 2px 0 4px;
+		}
+
+		.submitter {
+			@include sprite-default;
+			@include bouton-loupe;
+			margin-left: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	.reseaux-sociaux {
+		display: flex;
+		justify-content:space-around;
+	}
+
+	@each $classe, $service in 
+		(fb, facebook),
+		(tw, twitter),
+		(ig, instagram),
+		(gplus, google),
+		(pi, pinterest),
+		(yt, youtube),
+		(app, app)
+	{	
+		.icone-rs-#{$classe} {
+			@include sprite-default;
+			@extend %lien-#{$service};
+		}
+	}
+}
+
+.inscription-newsletter {
+
+		form {
+			font-size: 0.8rem;
+			padding: 2px 0;
+		}
+
+		input#newsletter {
+			width: 85%;
+		}
+
+		.submitter {
+			@include sprite-default;
+			@include bouton-fleche-droite-blanc;
+			vertical-align: middle;
+		}
+
+}
+
+.annexes {
+
+	.inscription-newsletter {
+		@include boite-arrondie-bas(10px);
+		background-color: $violet-tdn;
+
+		a {
+			float: right;
+			margin: 0.5em 0.5em 0 0;
+		}
+
+		form {
+			padding: 0 0 0.5rem 1rem;
+		}
+
+		.sprite {
+			display: inline-block;
+			margin: 0.5rem 0 0 0.5rem;
+		}
+	}
+}
+
+#side-pub,
+#bloc-facebook-friends,
+#twitter-widget {
+	text-align: center;
+}

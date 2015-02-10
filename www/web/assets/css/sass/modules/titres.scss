@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $questrial;
+}
+
+.accroche-article h4 {
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 0rem;
+	color: $blanc;
+	min-height: 4.5rem;
+	padding: 4px 8px;
+	position: absolute;
+	width: calc(100% - 30px);
+	z-index: 20;
+}
+
+.etiquette-rubrique {
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+@each $type in (recherche, profil, article, conseil, video, dossier, question, concours) {
+	
+	.titre-#{$type}:before {
+		@include sprite-default;
+		@extend %icone-#{$type}-violet;
+		display: inline-block;
+		content: "";
+		margin-right: 0.5rem;
+		vertical-align: middle;	
+	}
+}
+
+@each $type in (article, conseil, video, dossier) {
+	
+	.mini-#{$type}:before {
+		@include sprite-default;
+		@extend %icone-#{$type}-mini;
+		display: inline-block;
+		content: "";
+		margin-right: 0.5rem;
+		vertical-align: middle;	
+	}
+}

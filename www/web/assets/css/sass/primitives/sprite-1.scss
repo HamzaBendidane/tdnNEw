@@ -1,0 +1,18 @@
+@mixin sprite ($hauteur, $largeur) {
+	background-image: $sprite-source;
+	content: "";	
+	height: $hauteur;
+	width: $largeur;
+}
+
+@mixin en-ligne {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+@mixin interrogation {
+	height:61px;
+	width:69px;
+	background-position:-500px -149px;
+}

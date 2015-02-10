@@ -1,0 +1,202 @@
+.logo-TDN{
+	@include sprite-default;
+	@include logo;
+	display: block;
+}
+
+.header-pub {
+	position: relative;
+	top: 50px;
+}
+
+#contenusNavigation {
+	background-color: #FFF;
+	@include boite-arrondie-haut(1rem);
+	color: $anthracite;
+
+	.menuContenus {
+		display: flex;
+		justify-content: space-around;
+		padding: 0.3rem 0px;
+		margin: 0px 20px;
+		border-bottom: 1px solid #CCC;
+	}
+
+	.itemContenu {
+		display: inline-block;
+		font-family: $questrial;
+		font-weight: 400;
+		padding: 2px 10px;
+	}
+
+	.itemContenu:hover {
+		background-color: #C018AC;
+		border-radius: 4px;
+		color: $blanc;
+	}
+
+	.lienContenu:before {
+		@include sprite-default;
+		vertical-align: middle;
+	}
+	
+	@each $titre, $classe in 
+		(Questions, question),
+		(Concours, concours),
+		(Videos, video),
+		(Conseils, conseil-expert),
+		(Articles, article),
+		(Dossiers, dossier),
+		(Quiz, quiz)
+	{
+		.lien#{$titre}:before {
+			@extend %nav-#{$classe}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#contenusNavigation {
+		.itemContenu {
+			font-size: 0;
+		}
+
+		.lienContenu:before {
+			display: inline-block;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px)  {
+	#contenusNavigation {
+		.itemContenu {
+			font-size: 0.8rem;
+		}
+
+		.lienContenu:before {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (min-width: 980px) {
+	#contenusNavigation {
+		.itemContenu {
+			font-size: 1rem;
+		}
+
+		.lienContenu:before {
+			display: inline-block;
+		}
+	}
+}
+
+#rubriquesNavigation {
+	background-color: #FFF;
+	padding: 0;
+
+	.menuRubriques {
+		display: flex;
+		justify-content: space-around;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		zoom: 1;
+
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+
+		&:after {
+			clear:both;
+		}
+
+		@each $rubrique, $couleur in (
+			beaute: $beauteTexte, 
+			deco: $decoTexte, 
+			mode: $modeTexte, 
+			geekette: $geeketteTexte, 
+			recettes: $recettesTexte, 
+			bien-etre: $bienEtreTexte, 
+			a-la-une: $alauneTexte, 
+			sexo-psycho: $sexoPsychoTexte)
+		{
+			.#{$rubrique} .subMenu {
+				background-color: $couleur; 
+			}
+		}
+
+		.sexo-psycho .subMenu {
+			left: -152px;
+		}
+
+		.recettes .subMenu {
+			left: -212px;
+		}
+	}
+
+	.mainMenuLabel {
+		font-size: 1.3rem;
+	}
+
+	.itemRubrique {
+		display: inline-block;
+		font: bold 18px $questrial;
+		padding: 0.5rem 1rem;
+		position: relative;
+		width: calc(12.5% - 0.24rem);
+		text-align: center;
+	}
+
+	.subMenu {
+		border-bottom-right-radius: 6px;
+		border-bottom-left-radius: 6px;
+		list-style: none;
+		margin-left: -1rem;
+		padding: 0.5rem;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		z-index: 400;
+
+		&.menu-masque {
+			visibility: hidden;
+			max-height: 0;
+			opacity: 0;
+			top: 35px;
+			-webkit-transition-property: top, max-height, opacity;
+			-webkit-transition-duration: 0.4s, 0.1s, 0.4s;
+		}
+
+		&.menu-visible {
+			visibility: visible;
+			max-height: 41px;
+			opacity: 1;
+			top: 41px;
+			-webkit-transition-property: top, max-height, opacity;
+			-webkit-transition-duration: 0.4s, 0.1s, 0.4s;
+		}
+
+		.itemSousRubrique {
+			color: $blanc;
+			display: inline-block;
+			font: 400 1rem $questrial;
+			padding-left: 6px;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.itemSousRubrique:not(:last-child):after {
+			content: "•";
+			color: #333;
+			font-size: 1.3rem;
+			padding-left: 6px;
+			vertical-align: middle;
+		}
+	}
+}

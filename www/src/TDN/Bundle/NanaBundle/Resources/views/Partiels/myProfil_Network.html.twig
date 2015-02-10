@@ -1,0 +1,44 @@
+{% extends 'TDNNanaBundle:Pages:mySectionsProfil.html.twig' %}
+
+{% block nanaData %}
+<article class="relations-tdn" id="mes-relations">
+	<section class="followings standard-border bas-rond-asymetrique">
+		<header class="regulier">
+			<h2>Je m'intéresse à elles</h2>
+			<p class="abonnes"><span class="cardinal">{{ me.follows|length }}</span>nanas</p>
+		</header>
+		<div class="galerie-lineaire">	
+			{% for who in me.follows %}
+			<figure class="element-galerie has-croix-suppression">
+				<a class="popin" href="{{ avatar(who) }}" title="{{ who.username }}">
+					<img class="apercu vignette" src="{{ avatar(who, 'sqr_')}}" alt="{{ who.username }}" />
+				</a>
+				<figcaption class="suppression">
+					<button href="{{ path('Nana_unfollow', {'nana': who.idNana}) }}" class="croix-suppression">X</button>
+				</figcaption>
+			</figure>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="followers standard-border bas-rond-asymetrique">
+		<header class="regulier">
+			<h2>Elles aiment mon profil</h2>
+			<p class="abonnes"><span class="cardinal">{{ me.isFollowed|length }}</span>nanas</p>
+		</header>
+		<div class="galerie-lineaire">	
+			{% for who in me.isFollowed %}
+			<figure class="element-galerie has-croix-suppression">
+				<a class="popin" href="{{ avatar(who) }}" title="{{ who.username }}">
+					<img class="apercu vignette" src="{{ avatar(who, 'sqr_') }}" alt="{{ who.username }}" />
+				</a>
+				<figcaption>
+				</figcaption>
+			</figure>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="messages">
+		
+	</section>
+</article>
+{% endblock %}

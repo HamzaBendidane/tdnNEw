@@ -1,0 +1,29 @@
+<div class="bloc-transparent">
+	<div class="bandeau bloc-questions-nanas row">
+		<a href="{#{ path() }#}" class="lien-propos">Pose la question aux nanas</a>
+		<h3 class="titre-icone">Questions de nanas</h3>
+	</div>
+	<div class="hot row">
+		<div class="bloc-icone"></div>
+		<div class="col-lg-2 col-md-2"></div>
+		{% if questionsRecentes is empty %}
+		<p class="warning">Aucune question publiée sur TDN</p>
+		{% else %}
+			{% for q in questionsRecentes %}
+		<article class="bloc-question col-lg-5 col-md-5 col-sm-12 col-xs-12 margin-sm-4">
+			{% if q.lnAuteur is not null%}
+			<p class="lienAuteur credits soude">
+				<span class="as">de </span>
+				<a class="auteur" href="{#{ path('NanaBundle_profil', {'id': q.lnAuteur.idNana}) }#}">
+					{{ q.lnAuteur.username }}
+				</a> 
+			{% endif %}
+			<p class="datePublication credits">{{ q.datePublication|laps }}</p>
+			<a href="{{ q|targetURL }}">
+				<h4 class="apercuTexte">{{ q.titre|raw }}</h4>
+			</a>			
+		</article>
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>

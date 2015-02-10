@@ -1,0 +1,78 @@
+.galerie-lineaire {
+
+	figure {
+		display: inline-block;
+		height: calc(80px + 1rem);
+		padding: 0.5rem 1.5rem;
+		width: calc(80px + 3rem);
+		overflow:hidden;
+	}
+
+	.element-galerie {
+		position: relative;
+
+		.vignette:hover {
+			cursor: zoom-in;
+		}
+
+		figcaption {
+			display: block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+		}
+
+		.croix-suppression {
+			@include sprite-default;
+			background-color: $violet-tdn;
+			border: 1px solid white;
+			border-radius: 50%;
+			box-shadow: -3px 3px 8px 1px rgba(153, 153, 153, 0.8);
+			color: $blanc;
+			display: none;
+			font-size: 0.9rem;
+			height: 1.8rem;
+			padding: 0.2rem;
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			width: 1.8rem;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.element-avenir {
+		font-size: 0.85rem;
+		text-align: center;
+
+		.bouton-ajout-image {
+			border-radius: 4px;
+			display: block;
+			text-decoration: none;
+			margin-top: 1.1rem;
+			background-color: #FFF;
+			border: 1px solid #9B0083;
+			pading: 1.5rem;
+			opacity: 0.4;
+			-webkit-transition: opacity 0.4s ease;
+			-o-transition: opacity 0.4s ease;
+			transition: opacity 0.4s ease;
+
+			&:hover {
+				opacity: 1;
+				-webkit-transition: opacity 0.4s ease;
+				-o-transition: opacity 0.4s ease;
+				transition: opacity 0.4s ease;
+			}
+		}
+	}
+}
+
+.has-croix-suppression:hover .croix-suppression {
+	display: block;
+}

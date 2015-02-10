@@ -1,0 +1,33 @@
+.message-utilisateur {
+	background-color: $rose-tdn;
+	border-radius: 4px;
+	color: $violet-tdn;
+	margin: 1rem 0;
+	padding: 40px;
+
+	&.information:before {
+		margin-bottom: 1rem;
+	}
+}
+
+.information:before {
+	@include sprite-default;
+	@include alerte-info;
+	float: left;
+	margin-right: 1rem;
+}
+
+.information:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.information + ul {
+	margin-left: 60px;
+}
+
+.message-inline {
+	color: $violet-tdn;
+	font-style: italic;	
+}
