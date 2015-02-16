@@ -3,17 +3,18 @@
 {% endif %}
 <form action="{{ path('NanaBundle_loginCheck') }}" method="post">
     <div class="loginFields">
-	    <label for="username">Pseudo </label>
+	    <label for="username">Pseudo 
         <input type="text" id="username" name="_username" value="{{ last_username }}" />
-     
-        <label for="password">Mot de passe </label>
+     	</label>
+        <label for="password">Mot de passe 
         <input type="password" id="password" name="_password" />
-
+		</label>
 	   <input id="envoyer" type="submit"  name="envoyer" value="" class="loginSubmit">
     </div>
 	<div class="loginFields rememberField">
+		<label for="remember_me">Conserver la connexion ouverte
 		<input type="checkbox" id="remember_me" name="_remember_me" checked />
-	    <label for="remember_me">Conserver la connexion ouverte</label>
+	    </label>
     </div>
 
 
