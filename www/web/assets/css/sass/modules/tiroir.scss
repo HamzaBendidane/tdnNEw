@@ -4,16 +4,19 @@
     box-shadow: 0px 0px 7px 0px #666;
 	color: white;
 	position: fixed;
-	z-index: 200;
-	-moz-transition-property: top;
-	-moz-transition-duration: 0.5s;
-	-moz-transition-timing-function: ease-out;
-	-webkit-transition-property: top;
-	-webkit-transition-duration: 0.5s;
-	-webkit-transition-timing-function: ease-out;
-	transition-property: top;
-	transition-duration: 0.5s;
-	transition-timing-function: ease-out;
+	z-index: 500;
+	/* -moz-transition-property: top; */
+	/* -moz-transition-duration: 0.5s; */
+	/* -moz-transition-timing-function: ease-out; */
+	/* -webkit-transition-property: top; */
+	/* -webkit-transition-duration: 0.5s; */
+	/* -webkit-transition-timing-function: ease-out; */
+	/* transition-property: top; */
+	/* transition-duration: 0.5s; */
+	/* transition-timing-function: ease-out; */
+	-moz-transition : all 0.5s ease ;
+	-webkit-transition : all 0.5s ease;
+	-o-transition : all 0.5s ease;
 }
 
 .picto-mytdn {
@@ -35,6 +38,8 @@
 
 	label {
 		font-weight: 400;
+		text-align:right;
+		width : 279px;
 	}
 
 	label[for="remember_me"] {
@@ -65,13 +70,13 @@
 
 	.loginSubmit {
 		@include sprite-default;
-		@include bouton-fleche-droite-blanc-mytdn;
+		@include bouton-fleche-droite-blanc;
 		background-color: $violet-secondaire;
 		border-radius: 50%;
 		margin-left: 1rem;
 		padding: 12px;
 		position: relative;
-		top: -3px;
+		top: 10px;
 	}
 
 	.groupe-options {
@@ -92,16 +97,29 @@
 	}
 }
 
+@media screen and (max-width: 460px) {
+	#mytdn-dashboard label {
+			display : block;
+			text-align: left;
+	}
+	
+	#mytdn-dashboard label input {
+		display : block;
+		width : 182px;
+	}
+}
+
+
 .options {
 	background-color: $violet-tertiaire;
 	margin-top: 0.5rem;
 }
 
 #mytdn-grip {
-	align-items: center;
+	align-items: baseline;
     background-color: $violet-secondaire;
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 0px 7px 0px #666;
+    /* box-shadow: 0px 0px 7px 0px #666; */
     color: white;
     display: flex;
     font-size: 0.8rem;
@@ -115,6 +133,8 @@
 		@include logo-mytdn-petit;
 		display: inline-block;
 	    margin-left: 1rem 0;
+		position : relative;
+		top : 7px;
     }
 }
 
@@ -125,14 +145,84 @@
 }
 
 .mytdn-closed {
-	top: -164px;
-
+	top: -171px;
+	opacity : 0.5;
 	.indicateur-etat-tiroir {
 		@include sprite-default;
 		@include mytdn-open;
 		display: inline-block;
+		
 	}
 }
+
+@media screen and (max-width: 1200px) {
+		.mytdn-closed {
+			top : -203px;	
+		}
+}
+
+@media screen and (max-width: 1005px) {
+		.mytdn-closed {
+			top : -224px;	
+		}
+}
+
+@media screen and (max-width: 763px) {
+		.mytdn-closed {
+			top : -326px;	
+		}
+}
+
+@media screen and (max-width: 664px) {
+		.mytdn-closed {
+			top : -350px;	
+		}
+}
+
+@media screen and (max-width: 634px) {
+		.mytdn-closed {
+			top : -358px;
+				
+		}
+}
+
+
+@media screen and (max-width: 593px) {
+		.mytdn-closed {
+			top : -358px;
+				
+		}
+}
+
+@media screen and (max-width: 452px) {
+		.mytdn-closed {
+			top : -438px;
+				
+		}
+}
+
+
+@media screen and (max-width: 366px) {
+		.mytdn-closed {
+			top : -438px;	
+		}
+		#mytdn-grip {
+			right : inherit;		
+		}
+}
+
+@media screen and (max-width: 325px) {
+		.mytdn-closed {
+			top : -443px;	
+		}
+}
+
+@media screen and (max-width: 304px) {
+		.mytdn-closed {
+			top : -443px;	
+		}
+}
+
 
 .mytdn-open {
 	top: 0;

@@ -53,6 +53,9 @@
 			@include sprite-default;
 			@include bouton-fleche-droite-blanc;
 			vertical-align: middle;
+			width : 24px;
+			height : 24px;	
+			border-radius : 50%;
 		}
 
 }
