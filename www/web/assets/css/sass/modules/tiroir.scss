@@ -23,7 +23,13 @@
 	@include sprite-default;
 	@include picto-mytdn;
 	position: relative;
-	top: 20px;
+	top: 20px;	
+	
+	@media screen and (max-width: 460px) {
+		display : none;
+			
+	}
+	
 }
 
 #mytdn-dashboard {
@@ -106,6 +112,10 @@
 	#mytdn-dashboard label input {
 		display : block;
 		width : 182px;
+	}
+	
+	#mytdn-dashboard .avatar-scotche-defaut {
+		display : none;	
 	}
 }
 
@@ -194,9 +204,9 @@
 		}
 }
 
-@media screen and (max-width: 452px) {
+@media screen and (max-width: 460px) {
 		.mytdn-closed {
-			top : -438px;
+			top : -304px;
 				
 		}
 }
@@ -204,7 +214,7 @@
 
 @media screen and (max-width: 366px) {
 		.mytdn-closed {
-			top : -438px;	
+			top : -304px;	
 		}
 		#mytdn-grip {
 			right : inherit;		

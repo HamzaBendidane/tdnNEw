@@ -42,6 +42,10 @@
 			@include sprite-default;
 			@include bulle-question-1;
 			position: absolute;
+			
+			@media screen and (max-width: 766px) {
+				position : relative;	
+			}
 		}
 
 		.bloc-question:before {
@@ -117,11 +121,11 @@
 	border-top: 0;
 	border-radius: 0 0 12px 12px;
 	padding: 1.5rem 10px 1rem;
-	width: 50%;
+/*	width: 50%; */
 }
 
 .flex-questions {
-	display: flex;
+	/* display: flex; */
 	justify-content: space-between;
 
 	article {
@@ -134,12 +138,12 @@
 
 	.questions-recentes {
 		@include colonne-questions;
-		margin-right: 10px;
+		
 	}
 
 	.questions-aimees {
 		@include colonne-questions;
-		margin-left: 10px;
+		
 	}
 }
 
@@ -162,6 +166,11 @@
 		@include sprite-default;
 		@include shopping-coup-de-coeur-1;
 		float: left;
+		
+		@media screen and (max-width: 766px) {
+			float : inherit ;	
+			margin : 0 auto ;
+		}
 	}
 
 	.retour-arriere {
@@ -186,6 +195,11 @@
 	    overflow: hidden;
 	    vertical-align: middle;
 	    width: calc(100% - 280px);
+		
+		@media screen and (max-width: 766px) {
+				width: calc(100% - 140px);	
+			}
+
 
 		.conteneur {
 			position: relative;

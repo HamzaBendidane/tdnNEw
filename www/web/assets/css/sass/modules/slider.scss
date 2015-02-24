@@ -4,7 +4,12 @@
 	height: 342px;
 	margin-bottom: 3px;
 	position: relative;
-
+	
+	@media screen and (max-width: 630px) {
+		margin-bottom: 35px;
+		height : 380px;
+	}
+	
 	.scene {
 		background: #E2EDF6;
 		/*border: 2px solid #1EC1BB;*/
@@ -40,6 +45,15 @@
 		right: 10px;
 		z-index: 200;
 		text-align: right;
+
+		@media screen and (max-width: 630px) {
+			text-align: center;
+			width : 100%;
+			top : inherit ;		
+			bottom : 0px;	
+		}
+		
+
 
 		a {
 			color:#752670;
@@ -109,9 +123,21 @@
 	    width: calc(100% - 2px);
 	    z-index: 20;
 
+		@media screen and (max-width: 630px) {
+			display : block;	
+		}
+
 		.enveloppe-titre {
 			font-family: "Droid Sans", Helvetica, sans-serif;
 			width: 75%;
+			
+			@media screen and (max-width: 630px) {
+				width : 100%;
+				
+				.titre {
+					display : block;	
+				}
+			}
 
 			.titre {
 			   	color: $blanc;
@@ -134,6 +160,10 @@
 			font-size: 0.75rem;
 			text-align: right;
 			width: 25%;
+			
+			@media screen and (max-width: 630px) {
+				width : 100%;			
+			}
 		}
 	}
 

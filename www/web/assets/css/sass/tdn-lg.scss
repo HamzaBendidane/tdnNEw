@@ -108,7 +108,7 @@ input[type="submit"] {
     padding: 0rem 2rem 0.5rem;
 
     .recherche-rapide {
-      width: 50%;
+      width: 80%;
     }
 
     .reseaux-sociaux {
@@ -117,10 +117,31 @@ input[type="submit"] {
       justify-content: space-between;
     }
   }
+  
+
+  
 }
+	@media (max-width: 630px) {
+		.bloc-recherche {	
+			display : block;	
+			width : 100%;
+			text-align : center;
+			
+			.recherche-rapide {
+     			 width:100%;
+				 display:block;
+    		}
+			
+			.reseaux-sociaux {
+				width: 100%;
+				margin-top : 20px;
+				justify-content: space-between;
+			}
+		}
+	}
 
 .scene {
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 .point {
