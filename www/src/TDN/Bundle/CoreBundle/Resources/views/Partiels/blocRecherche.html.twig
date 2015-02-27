@@ -1,8 +1,35 @@
-<div class="bloc-recherche row">
+<!-- Fil d'ariane -->
+<div class="ariane row">
+
+	<!-- 1 level -->
+	<a href="" title="Home Sweet Home">
+		Accueil
+	</a>		
+	<!-- ! 1 level -->
+	
+	<!-- 2 level -->
+	<span class="arianeSep">&nbsp;&gt;&nbsp;</span>
+	<a href="" title="Titre de la rubrique">
+		2 Rubriques
+	</a>	
+	<!-- ! 2 level -->
+	
+	<!-- 3 level -->
+	<span class="arianeSep">&nbsp;&gt;&nbsp;</span>
+	<span class="arianeCourant">
+		3 articles
+	</span>
+	<!-- ! 3 level -->	
+	
+</div>
+<!-- Fil d'ariane -->
+
+
+	<div class="bloc-recherche row">
     <!-- Moteur de recherche -->
     <div class="recherche-rapide">
         <form name="recherche" id="recherche" action="{#{ path('Document_rechercheForm') }#}" method="get" enctype="">
-            <input type="text" size="40" name="seed" placeholder="Expression à rechercher" />
+            <input type="text" size="40" name="seed" class="rechercheRapideInput" placeholder="Expression à rechercher" />
             <input type="submit" name="quicksearch" class="submitter" value=">" />
         </form>
     </div>

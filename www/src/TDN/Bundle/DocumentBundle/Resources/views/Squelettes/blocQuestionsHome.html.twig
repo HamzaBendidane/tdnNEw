@@ -5,15 +5,15 @@
 		{% endif %}
 		<h3 class="titre-icone">{{ titreEntite }}</h3>
 	</div>
-	<div class="row flex-questions">
+	<div class="flex-questions row">
 	{% if recents is empty %}
 		<p class="warning">{{ messageEmpty }}</p>
 	{% else %}
-		<div class="questions-recentes">
+		<div class="questions-recentes col-lg-6 col-sm-12">
 			<h4>Les + récentes</h4>
 		{% block corpsQuestionsRecentes %}{% endblock %}
 		</div>
-		<div class="questions-aimees">
+		<div class="questions-aimees col-lg-6 col-sm-12">
 			<h4>Les + populaires</h4>
 		{% block corpsQuestionsAimees %}{% endblock %}
 		</div>
