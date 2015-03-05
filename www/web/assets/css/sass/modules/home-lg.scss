@@ -13,7 +13,7 @@
 }
 
 .bloc-transparent {
-	margin: 1rem;
+	/*margin: 1rem;*/
 
 	.bandeau {
 		border-bottom: 2px dotted $vert-tdn;
@@ -34,7 +34,7 @@
 
 .en-scene {
 
-	padding-top: 45px;
+	/*padding-top: 45px;*/
 
 	.bloc-questions {
 
@@ -58,8 +58,8 @@
 
 .bloc-bandeau-violet {
 
-	margin: 1rem;
-
+	padding: 1rem;
+	background-color : $blanc;
 	.bandeau {
 		@include boite-arrondie-haut(10px);
 		@include gradient-horz-monochrome-fade(155,0,131);
@@ -179,6 +179,7 @@
 		border: 0;
 		display: inline-block;
 	    vertical-align: middle;
+		background-color:transparent;
 	}
 
 	.avance-suite {
@@ -187,6 +188,7 @@
 		border: 0;
 		display: inline-block;
 	    vertical-align: middle;
+		background-color:transparent;
 	}
 
 	.scene-shopping {

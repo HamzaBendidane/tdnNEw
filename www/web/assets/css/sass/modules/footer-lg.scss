@@ -1,8 +1,16 @@
 footer.appendices {
-	@include boite-arrondie-haut(10px);
-	background-color: $violet-tdn;
-	padding-left: 10px;
-	padding-top: 10px;
+	
+	background-color : $blanc;	
+	padding : 0 4px;
+	
+	.footerDesign {
+		@include boite-arrondie-haut(10px);
+		background-color: $violet-tdn;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+	
+	
 
 	.droits {
 		font-size: 0.8em;

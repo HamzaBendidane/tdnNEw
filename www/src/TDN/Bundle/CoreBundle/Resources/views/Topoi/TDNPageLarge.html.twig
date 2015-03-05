@@ -81,6 +81,10 @@
 			{% render(controller("TDNDocumentBundle:Rubrique:menuRubriques")) %}
 		</div>
 
+		<div class="row separationBlockFullWidth">
+			<hr class="separationTop">		
+		</div>
+
 		{% include "TDNCoreBundle:Partiels:blocRecherche.html.twig" %}
 
 		<!--  -->
@@ -104,7 +108,9 @@
 
 		<!-- Pied de page -->
 		<footer class="row appendices">
+			<div class="footerDesign row">
 			{% include "TDNCoreBundle:Partiels:piedPage.html.twig" %}
+			</div>
 		</footer>
 	</div>
 

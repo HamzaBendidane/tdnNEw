@@ -44,15 +44,28 @@
 	@include nanas-semaine;
 	text-align: center;
 
+	@media (max-width:1200px) {
+		height : inherit;	
+		background : inherit;
+		
+	}
+
 	img {
 		position: relative;
-		top: 14px;
+		top: 18px;
+		width : 90%;
 		/*left: 12px;*/
+		
+		@media (max-width: 1200px) {
+			top : inherit;
+			width :	50%;
+			margin : 0 auto ;	
+		}
 	}
 
 	figcaption {
 		position: relative;
-		top: 30px;
+		/* top: 30px; */ 
 
 		.nana-pseudo {
 			color: $violet-tdn;

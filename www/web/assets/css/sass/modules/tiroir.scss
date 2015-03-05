@@ -46,6 +46,10 @@
 		font-weight: 400;
 		text-align:right;
 		width : 279px;
+		
+		input {
+			color : $vert-tdn;	
+		}
 	}
 
 	label[for="remember_me"] {
