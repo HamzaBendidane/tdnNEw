@@ -1,0 +1,43 @@
+body {
+  background-color: $vert-eau;
+  border-top: solid $violet-tdn 3px;
+  /*font-size: 16px;*/
+}
+
+a {
+	color: inherit;
+}
+
+@each $rubrique, $couleur in (
+	beaute: $beauteTexte, 
+	deco: $decoTexte, 
+	mode: $modeTexte, 
+	geekette: $geeketteTexte, 
+	recettes: $recettesTexte, 
+	bien-etre: $bienEtreTexte, 
+	a-la-une: $alauneTexte, 
+	sexo-psycho: $sexoPsychoTexte) {
+
+	.#{$rubrique} {
+		color: $couleur; 
+
+		&:hover {
+		  color: $blanc;
+		  background-color: $couleur;
+		}
+
+		a:link {
+		  color: inherit; 
+		}
+
+		a:visited {
+		  color: inherit;
+		}
+	}
+}
+
+#contenuPrincipal {
+	/*border-top: 2px solid #9b0083;*/ 
+	background-color: $blanc;
+	padding : 0 10px;
+}

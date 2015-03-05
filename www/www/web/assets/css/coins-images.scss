@@ -1,0 +1,62 @@
+.old-rubriqueMarqueur {
+
+	position: relative;
+
+	&:before {
+		content: "";
+	    display: block;
+	    left: 0px;
+	    position: absolute;
+	    top: 0px;
+	    z-index: 1;
+	}
+
+	img {
+		z-index: 10;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+	}
+}
+
+@each $rubrique, $couleur in (
+beaute: $beauteTexte, 
+deco: $decoTexte, 
+mode: $modeTexte, 
+geekette: $geeketteTexte, 
+recettes: $recettesTexte, 
+bien-etre: $bienEtreTexte, 
+a-la-une: $alauneTexte, 
+sexo-psycho: $sexoPsychoTexte,
+equipe: $bienEtreSecondaire) 
+{
+	.coin_#{$rubrique} {
+		.vignette {
+			background-clip: padding-box;
+			background-image: url(/assets/images/theme/coins/coin_#{$rubrique});
+			background-repeat: no-repeat;
+			background-size: 50%;
+			padding: 5px;
+			width: 100%;
+		}		
+	}
+}
+
+@each $rubrique, $couleur in (beaute: $beauteTexte, deco: $decoTexte, mode: $modeTexte, geekette: $geeketteTexte, recettes: recettesTexte, bien-etre: $bienEtreTexte, a-la-une: $alauneTexte, sexo-psycho: $sexoPsychoTexte) {
+
+	.coin_#{$rubrique}:before{
+		background-color: $couleur;
+	}
+	
+	.coin_#{$rubrique} .vignette {
+		z-index: 10;
+	}
+
+	.bordGauche_#{$rubrique} {
+		border-left: 5px solid $couleur;
+	}
+}
+
+.vignette {
+	width: 100%;
+}

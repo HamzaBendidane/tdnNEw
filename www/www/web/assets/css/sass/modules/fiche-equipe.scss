@@ -1,0 +1,67 @@
+.liste-equipe {
+	background-color: $vert-eau;
+	border-radius: 4px;
+	padding: 0.5rem; 
+}
+
+.membre-equipe {
+	background-color: white;
+	border-radius: 4px;
+	/*display: flex;*/
+	margin: 1rem 0;
+	padding: 0.5rem;
+	width: 100%;
+
+	.avatar-equipe {
+		display: inline-block;
+		width: calc(15% - 0.5rem);
+		margin-right: 0.5rem;
+		vertical-align: top;
+	}
+
+	.presentation {
+		display: inline-block;
+		width: calc(60% - 1.5rem);
+		margin: 0 0.5rem;
+
+		.identite {
+		    margin: 0 0 1rem 0;
+		    font-size: 1.5rem;
+		}
+
+		.specialite {
+			margin: 0;
+			font-size: 0.9rem;
+			color: $vert-tdn;
+		}
+
+		.biographie {
+			font-size: 0.9rem;
+			text-align: justify;
+		}
+	}
+	
+	.links {
+		background-color: $vert-eau;
+		display: inline-block;
+		max-width: calc(25% - 1rem);
+		margin: 0 0 0 0.8rem;
+		padding: 0.5rem 0.2rem;
+
+		.silos {
+			margin: 0.5rem 0.2rem;
+		}
+	}
+}
+
+.bouton-social {
+	border: none;
+	background-color: transparent;
+	margin: 2px;
+}
+
+.link-twitter {
+	@include sprite-default;
+	@include logo;
+
+}

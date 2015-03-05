@@ -1,0 +1,488 @@
+@mixin sprite ($hauteur, $largeur) {
+	background-image: $sprite-source;
+	background-repeat: no-repeat;
+	content: "";	
+	height: $hauteur;
+	width: $largeur;
+}
+
+@mixin sprite-default {
+	background-image: $sprite-source;
+	background-repeat: no-repeat;
+	content: "";	
+}
+
+@mixin sprite-lg {
+	@include sprite-default;
+	position: absolute;
+	top: 11px;
+	left: 35px;   
+}
+
+@mixin en-ligne {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+
+@mixin interrogation {
+	height:61px;
+	width:69px;
+	background-position:-500px -149px;
+}
+
+/* Rangée 1 */
+
+/*- logo */
+@mixin logo
+	{ width:238px; height:202px; background-position:-10px -10px; }
+/*- centre_picto-shopping-2 */
+@mixin shopping-coup-de-coeur-2
+	{ width:154px; height:145px; background-position:-258px -10px; }
+/*- right_logo-tdn-puce */
+@mixin logo-puce
+	{ width:62px; height:75px; background-position:-422px -10px; }
+
+/* Rangée 2 */
+
+/*- centre_picto-shopping-1 */
+@mixin shopping-coup-de-coeur-1
+	{ width:172px; height:145px; background-position:-10px -222px; }
+/*- commu_silhouettes */
+@mixin nanas-silhouettes
+	{ width:211px; height:141px; background-position:-192px -222px; }
+/*- centre_concours */
+@mixin icone-concours-bordered
+	{ width:94px; height:83px; background-position:-413px -222px; }
+
+/* Rangée 3 */
+
+/*- commu_nana-semaine */
+@mixin nanas-semaine
+	{ width:119px; height:134px; background-position:-10px -377px; }
+/*- centre_picto_qdn1 */
+@mixin bulle-question-1
+	{ width:187px; height:123px; background-position:-10px -521px; }
+/* centre_picto-shopping-3 */
+@mixin shopping-coup-de-coeur-3
+	{ width:137px; height:108px; background-position:-336px -377px; }
+/*- dossier_nav-1 */
+@mixin nav-dossier-1
+	{ width:22px; height:40px; background-position:-483px -377px; }
+
+/* Rangée 4 */
+
+/*- centre_picto_qdn2 */
+@mixin bulle-question-2
+	{ width:187px; height:123px; background-position:-139px -377px; }
+/*- footer_aufemin */
+@mixin aufeminin
+	{ width:222px; height:88px; background-position:-207px -521px; }
+/*- commu_nana */
+@mixin nanas-inscription-recente
+	{ width:66px; height:74px; background-position:-439px -521px; }
+
+/* Rangée 5 */
+
+/*- bulle_question_recettes */
+@mixin bulle-question-recettes
+	{ width:73px; height:65px; background-position:-176px -729px; }
+/*- centre_bulle-question_droite */
+@mixin bulle-question-tdn
+	{ width:73px; height:65px; background-position:-10px -654px; }
+/*- bulle_question_sexo */
+@mixin bullequestion-sexo-psycho
+	{ width:73px; height:65px; background-position:-93px -729px; }
+/*- bulle_question_bienetre */
+@mixin bulle-question-bien-etre
+	{ width:73px; height:65px; background-position:-10px -729px; }
+/*- bulle_question_mode */
+@mixin bulle-question-mode
+	{ width:73px; height:65px; background-position:-425px -654px; }
+/*- bulle_question_geek */
+@mixin bulle-question-geekette
+	{ width:73px; height:65px; background-position:-342px -654px; }
+
+/* Rangée 6 */
+
+/*- bulle_question_deco */
+@mixin bulle-question-deco
+	{ width:73px; height:65px; background-position:-259px -654px; }
+/*- bulle_question_beaute */
+@mixin bulle-question-beaute
+	{ width:73px; height:65px; background-position:-176px -654px; }
+/*- bulle_question_actu */
+@mixin bulle-question-a-la-une
+	{ width:73px; height:65px; background-position:-93px -654px; }
+/*- centre_bulle-nana */
+@mixin bulle-avatar
+	{ width:48px; height:60px; background-position:-259px -729px; }
+/*- mytdn_picto */
+@mixin picto-mytdn
+	{ width:158px; height:60px; background-position:-317px -729px; }
+/* -- */
+@mixin bulle-fermer
+	{ width:158px; height:60px; background-position:-317px -729px; }
+/*- centre_legende_reponse */
+@mixin centre_legende_reponse
+	{ width:22px; height:27px; background-position:-485px -729px; }
+
+/* Rangée 7 */
+
+/*- centre_conseils */
+%icone-conseil-expert-trombone
+	{ width:58px; height:59px; background-position:-10px -804px; }
+/*- centre_redac */
+%icone-article-trombone
+	{ width:58px; height:59px; background-position:-78px -804px; }
+/*- centre_videos */
+%icone-video-trombone
+	{ width:58px; height:59px; background-position:-146px -804px; }
+/*- centre_qdn */
+%icone-question-trombone
+	{ width:58px; height:59px; background-position:-214px -804px; }
+/*- picto_message_alerte */
+@mixin alerte-warning
+	{ width:58px; height:58px; background-position:-282px -804px; }
+/*- picto_message_info */
+@mixin alerte-info
+	{ width:58px; height:58px; background-position:-350px -804px; }
+/*- right_instagram-bloc */
+@mixin icone-instagram
+	{ width:57px; height:58px; background-position:-418px -804px; }
+/*- right_appli */
+%lien-app
+	{ width:25px; height:25px; background-position:-182px -1256px; }
+
+/* Rangée 8 */
+
+/* commu_degrade */
+@mixin commu_degrade
+	{ width:500px; height:54px; background-position:-10px -873px; }
+
+/* Rangée 9 */
+
+/*- centre_bulle-conseils */
+@mixin bulle-conseil-bordered
+	{ width:57px; height:51px; background-position:-10px -937px; }
+/*- centre_bulle-question_gauche */
+@mixin bulle-question-bordered
+	{ width:57px; height:51px; background-position:-77px -937px; }
+/*- commu_nombre */
+@mixin icone-communaute-nanas
+	{ width:112px; height:50px; background-position:-144px -937px; }
+/*- right_redac1 */
+%icone-article-vert
+	{ width:49px; height:49px; background-position:-266px -937px; }
+/*- right_dossier */
+%icone-dossier-vert
+	{ width:49px; height:49px; background-position:-384px -937px; }
+/*- right_concours */
+%icone-concours-vert
+	{ width:49px; height:49px; background-position:-325px -937px; }
+/*- picto_redacs */
+%icone-article-violet
+	{ width:47px; height:47px; background-position:-181px -998px; }
+
+/* Rangée 10 */
+
+/*- picto_conseils */
+%icone-conseil-violet
+	{ width:47px; height:47px; background-position:-238px -998px; }
+/*- picto_videos */
+%icone-video-violet
+	{ width:47px; height:47px; background-position:-295px -998px; }
+/*- picto_dossier */
+%icone-dossier-violet
+	{ width:47px; height:47px; background-position:-10px -1055px; }
+/*- picto_concours */
+%icone-concours-violet
+	{ width:47px; height:47px; background-position:-352px -998px; }
+/*- picto_qdn */
+%icone-question-violet
+	{ width:47px; height:47px; background-position:-409px -998px; }
+/*- Picttitre_recherche */
+%icone-recherche-violet
+	{ width:47px; height:47px; background-position:-67px -1055px; }
+/*- picto_profil */
+%icone-profil-violet
+	{ width:47px; height:47px; background-position:-67px -998px; }
+/*- centre_shop_left */
+@mixin bouton-rewind
+	{ width:40px; height:42px; background-position:-466px -998px; }
+
+/* Rangée 11 */
+
+/*- right_redac2 */
+%icone-article-bordered-md
+	{ width:47px; height:47px; background-position:-443px -937px; }
+/*- right_conseils */
+%icone-conseil-expert-bordered-md
+	{ width:47px; height:47px; background-position:-10px -998px; }
+@mixin icone-conseil-bordered-md
+	{ width:47px; height:47px; background-position:-10px -998px; }
+/*- right_qdn */
+%icone-question-bordered-md
+	{ width:51px; height:46px; background-position:-124px -1055px; }
+/*- right_qdn */
+%icone-video-bordered-md
+	{ width:51px; height:46px; background-position:-124px -1055px; }
+/*- picto_quiz */
+@mixin icone-quiz
+	{ width:47px; height:47px; background-position:-124px -998px; }
+/*- right_like-facebook */
+@mixin like-facebook
+	{ width:102px; height:43px; background-position:-185px -1055px; }
+/*- sprite_r86_centre_bulle_recettesc108 */
+%bulle-recettes-contour
+	{ width:49px; height:43px; background-position:-297px -1055px; }
+/*- centre_bulle_sexo */
+%bulle-sexo-psycho-contour
+	{ width:49px; height:43px; background-position:-69px -1112px; }
+/*- centre_bulle_bienetre */
+%bulle-bien-etre-contour
+	{ width:49px; height:43px; background-position:-128px -1112px; }
+/*- centre_reponse */
+@mixin nombre-reponse
+	{ width:30px; height:40px; background-position:-474px -1055px; }
+
+/* Rangée 12 */
+
+/*- centre_bulle_actu */
+%bulle-a-la-une-contour
+	{ width:49px; height:43px; background-position:-356px -1055px; }
+/*- centre_bulle_deco */
+%bulle-deco-contour
+	{ width:49px; height:43px; background-position:-246px -1112px; }
+/*- centre_bulle_geek */
+%bulle-geekette-contour
+	{ width:49px; height:43px; background-position:-415px -1055px; }
+/*- centre_bulle_beaute */
+%bulle-beaute-contour
+	{ width:49px; height:43px; background-position:-10px -1112px; }
+/*- centre_bulle_mode */
+%bulle-mode-contour
+	{ width:49px; height:43px; background-position:-187px -1112px; }
+/*- centre_shop_right */
+@mixin bouton-forward
+	{ width:40px; height:42px; background-position:-305px -1112px; }
+/*- centre_vote */
+@mixin nombre-vote
+	{ width:35px; height:40px; background-position:-172px -1165px; }
+/*- dossier_nav-5 */
+@mixin nav-dossier-5
+	{ width:47px; height:40px; background-position:-115px -1165px; }
+/*- dossier_nav-4 */
+@mixin nav-dossier-4
+	{ width:47px; height:40px; background-position:-58px -1165px; }
+
+/* Rangée 13 */
+
+/*- dossier_nav-3 */
+@mixin nav-dossier-3
+	{ width:38px; height:40px; background-position:-10px -1165px; }
+/*- dossier_nav-2 */
+@mixin nav-dossier-2
+	{ width:38px; height:40px; background-position:-355px -1112px; }
+/*- centre_vote-big */
+@mixin nombre-votes-grand
+	{ width:39px; height:39px; background-position:-217px -1165px; }
+/*- centre_reponse-big */
+@mixin nombre-reponses-grand
+	{ width:34px; height:39px; background-position:-266px -1165px; }
+/*- logo_mytdn */
+@mixin logo-mytdn-petit
+	{ width:78px; height:34px; background-position:-310px -1165px; }
+/*- centre_shop-news */
+@mixin coin-coup-de-coeur
+	{ width:36px; height:32px; background-position:-398px -1165px; }
+/*- nav_conseils */
+%nav-conseil-expert
+	{ width:35px; height:31px; background-position:-255px -1215px; }
+/*- nav_dossiers */
+%nav-dossier
+	{ width:35px; height:31px; background-position:-55px -1215px; }
+/*- nav_videos */
+%nav-video
+	{ width:35px; height:31px; background-position:-210px -1215px; }
+/*- nav_concours */
+%nav-concours
+	{ width:35px; height:31px; background-position:-165px -1215px; }
+
+/* Rangée 14 */
+
+/*- sprite_desktop_r11_c93 */
+%nav-question
+	{ width:35px; height:31px; background-position:-444px -1165px; }
+/*- nav_quiz */
+%nav-quiz
+	{ width:35px; height:31px; background-position:-300px -1215px; }
+/*- nav_redac */
+%nav-article
+	{ width:35px; height:31px; background-position:-10px -1215px; }
+/*- right_logo_tdn */
+@mixin logo-tdn-blanc
+	{ width:55px; height:31px; background-position:-100px -1215px; }
+/*- mytdn_1a */
+@mixin escarpin-rose
+	{ width:33px; height:29px; background-position:-139px -1256px; }
+/*- mytdn_2a */
+@mixin coeur-rose
+	{ width:33px; height:29px; background-position:-10px -1256px; }
+/*- mytdn_3a */
+@mixin journal-rose
+	{ width:33px; height:29px; background-position:-474px -1215px; }
+/*- mytdn_4a */
+@mixin follower-rose
+	{ width:33px; height:29px; background-position:-431px -1215px; }
+/*- mytdn_4b */
+@mixin follower-noir
+	{ width:33px; height:29px; background-position:-96px -1256px; }
+/*- mytdn_3b */
+@mixin journal-noir
+	{ width:33px; height:29px; background-position:-53px -1256px; }
+/*- mytdn_2b */
+@mixin coeur-noir
+	{ width:33px; height:29px; background-position:-388px -1215px; }
+
+
+/*- mytdn_1b */
+@mixin excarpin-noir
+	{ width:33px; height:29px; background-position:-345px -1215px; }
+/*- centre_legende_ */
+@mixin centre_legende_
+	{ width:26px; height:27px; background-position:-484px -1112px; }
+/*- right_youtube */
+%lien-youtube
+	{ width:25px; height:25px; background-position:-252px -1256px; }
+/*- right_google */
+%lien-google
+	{ width:25px; height:25px; background-position:-287px -1256px; }
+/*- right_pinterest */
+%lien-pinterest
+	{ width:25px; height:25px; background-position:-322px -1256px; }
+/*- right_twitter */
+%lien-twitter
+	{ width:25px; height:25px; background-position:-357px -1256px; }
+/*- right_instagram */
+%lien-instagram
+	{ width:25px; height:25px; background-position:-217px -1256px; }
+/*- right_facebbok */
+%lien-facebook
+	{ width:25px; height:25px; background-position:-485px -804px; }
+/*- picto_closed */
+@mixin picto_closed
+	{ width:22px; height:22px; background-position:-137px -1295px; }
+/*- mytdn_open */
+@mixin mytdn_open
+	{ width:22px; height:21px; background-position:-265px -1327px; }
+/*- mytdn_closed */
+@mixin mytdn_close
+	{ width:22px; height:21px; background-position:-471px -1295px; }
+/*- right_loupe */
+@mixin bouton-loupe
+	{ width:21px; height:21px; background-position:-489px -1165px; }
+/*- fil_qdn */
+@mixin fil_qdn
+	{ width:20px; height:20px; background-position:-224px -1359px; }
+/*- fil_concours */
+@mixin fil_concours
+	{ width:20px; height:20px; background-position:-194px -1359px; }
+/* fil_profil */
+@mixin fil_profil
+	{ width:20px; height:20px; background-position:-486px -1256px; }
+
+/* sprite_desktop_r16_c137 */
+@mixin icone-quiz-mini
+	{ width:20px; height:20px; background-position:-10px -1295px; }
+/*+ centre_escarpins_aide */
+@mixin escarpins-aide
+	{ width:38px; height:22px; background-position:-169px -1295px; }
+/*+ centre_escarpins_aide_big */
+@mixin escarpins-aide-grand
+	{ width:71px; height:40px; background-position:-403px -1112px; }
+/*- centre_escarpins_5 */
+%escarpins-5
+	{ width:117px; height:22px; background-position:-217px -1295px; }
+/*- centre_escarpins_4 */
+%escarpins-4
+	{ width:117px; height:22px; background-position:-10px -1295px; }
+/*- centre_escarpins_3 */
+%escarpins-3
+	{ width:118px; height:22px; background-position:-392px -1256px; }
+/*- centre_escarpins_2 */
+%escarpins-2
+	{ width:118px; height:22px; background-position:-137px -1327px; }
+
+/*- centre_escarpins_1 */
+%escarpins-1
+	{ width:117px; height:22px; background-position:-10px -1327px; }
+/*- centre_escarpins_0 */
+%escarpins-0
+	{ width:117px; height:22px; background-position:-344px -1295px; }
+%icone-dossier-mini
+	{ width:20px; height:20px; background-position:-74px -1359px; }
+/*- fil_redac */
+%icone-article-mini
+	{ width:20px; height:20px; background-position:-104px -1359px; }
+/*- fil_conseils */
+%icone-conseil-mini
+	{ width:20px; height:20px; background-position:-134px -1359px; }
+/*- fil_videos */
+%icone-video-mini
+	{ width:20px; height:20px; background-position:-164px -1359px; }
+/* sprite_desktop_r70_c51 */
+@mixin picto-facebook-violet
+	{ width:22px; height:19px; background-position:-362px -1325px; }
+/* sprite_desktop_r71_c37 */
+@mixin picot-twitter-violet
+	{ width:25px; height:18px; background-position:-394px -1325px; }
+/*- fleche_volet_bas */
+@mixin fleche-violet-bas
+	{ width:19px; height:18px; background-position:-254px -1359px; }
+/*- fleche_volet_haut */
+@mixin fleche-violet-haut
+	{ width:19px; height:18px; background-position:-283px -1359px; }
+/* sprite_desktop_r72_c18 */
+@mixin picto-envoyer
+	{ width:22px; height:17px; background-position:-487px -1325px; }
+
+/* sprite_desktop_r72_c30 */
+@mixin picto-imprimer
+	{ width:19px; height:17px; background-position:-10px -1355px; }
+/* sprite_desktop_r72_c11 */
+@mixin coeur-violet
+	{ width:19px; height:17px; background-position:-39px -1355px; }
+/*- commu_loupe */
+@mixin loupe
+	{ width:17px; height:16px; background-position:-312px -1359px; }
+/*- right_fleche-right */
+@mixin bouton-fleche-droite-blanc
+	/* { width:12px; height:12px; background-position:-494px -10px; }  */
+	{ width:12px; height:12px; background-position:-487px  -5px; }
+@mixin bouton-fleche-droite-blanc-mytdn
+	{ width:12px; height:12px; background-position:-88px -1350px; }
+/*- coeur_comments */
+@mixin coeur-vert
+	{ width:14px; height:12px; background-position:-494px -1327px; }
+
+.social_pas-suivre
+	{ width:34px; height:20px; background-position:-297px -1327px; }
+.fil_profil
+	{ width:20px; height:20px; background-position:-341px -1327px; }
+.sprite_desktop_r16_c135
+	{ width:20px; height:20px; background-position:-371px -1327px; }
+.social_print
+	{ width:19px; height:20px; background-position:-401px -1327px; }
+.social_mail
+	{ width:22px; height:20px; background-position:-430px -1327px; }
+.social_facebook
+	{ width:22px; height:20px; background-position:-462px -1327px; }
+.social_coeur
+	{ width:19px; height:20px; background-position:-10px -1359px; }
+.social_twitter
+	{ width:25px; height:20px; background-position:-39px -1359px; }
+.picto_affichage
+	{ width:26px; height:16px; background-position:-339px -1359px; }
+

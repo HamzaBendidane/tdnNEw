@@ -1,0 +1,34 @@
+.bouton-fleche-blanche {
+	
+	background-color: transparent;
+	border: none;
+	text-align: right;
+	padding-right: 1rem;
+
+	.bouton {
+		background-color: $violet-tdn;
+		border: none;
+		border-radius: 6px;
+		color: $blanc;
+		font-size: 0.9rem;
+		display: inline-block;
+		padding: 2px 8px;
+
+		&:after {
+			@include sprite-default;
+			@include bouton-fleche-droite-blanc;
+			display: inline-block;
+			margin-left: 0.5rem;
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+
+@each $service in (facebook, twitter, instagram, google, pinterest, youtube, app)
+{	
+	.icone-rs-#{$service} {
+		@include sprite-default;
+		@extend %lien-#{$service};
+	}
+}

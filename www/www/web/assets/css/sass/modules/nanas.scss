@@ -1,0 +1,147 @@
+.signature-personnelle {
+	
+	.auteur {
+
+	}
+
+	.date-publication {
+		color: $vert-soutenu;
+	}
+
+	.age {
+		color: $vert-soutenu;
+	}
+
+	.age:after {
+		content: 'ans';
+	}
+
+	.escarpins {
+
+		.stiletto {
+			height: 100%;
+		}
+	}
+}
+
+@each $n in (0, 1, 2, 3, 4, 5) {
+
+	.has-#{$n}-escarpins {
+		@include sprite-default;
+		@extend %escarpins-#{$n};
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.aide-escarpins {
+	@include sprite-default;
+	@include escarpins-aide;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.5rem;	
+}
+
+.petite-signature {
+	font-size: 0.8rem;
+	height: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.moyenne-signature {
+	font-size: 1rem;
+	height: 1.2rem;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.avatar-scotche-defaut {
+	@include sprite-default;
+	@include nanas-semaine;
+	text-align: center;
+
+	img {
+		position: relative;
+		top: 19px;
+		left: 0;
+		width: 100%;
+	}
+}
+
+.perso-profil {
+
+	font-size: 0.8rem;
+	font-weight: 400;
+
+	h1 {
+		margin-top: 0;
+	}
+
+	tr:not(:last-of-type) {
+		border-bottom: 1px solid $vert-eau;
+
+		td:first-child {
+			width: 30%;
+		}
+	}
+
+	td .standard-etiquette {
+		display: inline-block;
+		padding: 0.5rem 0;
+	}
+}
+
+.images-perso {
+
+	img {
+		border: 1px solid $vert-tdn;
+	}
+}
+
+#reseau-tdn {
+	margin: 1rem 0;
+}
+
+#ses-commentaires {
+
+	.commentaire {
+
+		border: 1px solid $vert-eau;
+
+		h4 {
+			color: #666;
+			font-size: 0.8rem;
+		}
+
+		.texte-commentaire {
+			font-size: 1rem;
+		}
+	}
+}
+
+.relations-tdn {
+
+	section:not(:first-child) {
+		margin-top: 2rem;
+	}
+
+	section {
+
+		h2 {
+			margin: 0;
+			flex: 9;
+		}
+
+		.abonnes {
+			flex: 1;
+			line-height: 1.1rem;
+
+			.cardinal {
+				display: block;
+				font-size: 1.5rem;
+				line-height: 0.8rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.resultats-recherche {
+
+	.reference {
+		background-color: $blanc;
+		margin:	1rem;
+		padding: 1rem;
+
+		h1 {
+			font-size: 1.1rem;
+			font-weight: bold;
+			line-height: 1.2;
+			margin: 0 0 0.5rem;
+		}
+	}
+
+	.reference-masquee {
+		display: none;
+	}
+
+	.reference-affichee {
+		display: block;
+	}
+
+	.resultats {
+
+		footer {
+			overflow: auto;
+			background-color: $vert-eau;
+			border-radius: 0 0 16px 16px;
+
+			.filet-bas {
+				background-color: $vert-tdn;
+				clear: both;
+				height: 1rem;
+				margin: 0; 
+				width: 100%
+			}
+		}
+	}
+
+	.lien-ouvrir:after {
+		@include sprite-default;
+		@include fleche-violet-bas;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+	.lien-fermer:after {
+		@include sprite-default;
+		@include fleche-violet-haut;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+}

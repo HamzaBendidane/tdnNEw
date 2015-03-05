@@ -4120,6 +4120,25 @@ input[type="submit"] {
   background-color: transparent;
   border: none; }
 
+.ariane {
+  background-color: white;
+  border-top: 2px solid #9B0083;
+  display: block;
+  float: left;
+  position: relative;
+  font-size: 14px;
+  padding: 12px 0 11px 10px;
+  width: 68%; }
+  .ariane .arianeSep {
+    color: #9B0083; }
+  .ariane .arianeCourant, .ariane .arianeSep {
+    font-weight: bold; }
+  @media (max-width: 980px) {
+    .ariane {
+      width: 100%;
+      float: inherit;
+      border-top: inherit; } }
+
 @media (min-width: 980px) {
   .bloc-recherche {
     float: right;
@@ -4146,10 +4165,7 @@ input[type="submit"] {
     .bloc-recherche .reseaux-sociaux {
       width: 50%;
       display: flex;
-      justify-content: space-between; }
-
-  iframe.twitter-timeline.twitter-timeline-rendered {
-    width: 100%; } }
+      justify-content: space-between; } }
 @media (max-width: 630px) {
   .bloc-recherche {
     display: block;

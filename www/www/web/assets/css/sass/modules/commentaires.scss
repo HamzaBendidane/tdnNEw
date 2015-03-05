@@ -1,0 +1,247 @@
+
+.isMain {
+	margin-left: 0;	
+	background-color: #FFF;
+}
+
+.isReponse {
+	padding-left: 60px;
+	position: relative;
+	width: calc(100% - 60px);
+}
+
+
+.switchReponses {
+	margin: 0 0 0 5px;
+}
+
+#avis-communaute {
+
+	margin-top: 2rem;
+
+	h2 {
+		font-size: 1.2rem;
+		font-weight: normal;
+		color: $anthracite;		
+	}
+}
+
+.form-commentaire {
+	display: flex;
+	width: 100%;
+
+	.texteContribution {
+		@include cadre-bulle-violette;
+   		height: 64px;
+		width: 100%;
+	}
+
+	.form-champs {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(100% - 60px);
+	}
+
+	.texteCommentaire {
+		border: 2px solid #FF91FF;
+		height: 30px;
+		padding: 10px;
+	}
+
+	.form-options {
+		align-items: baseline;
+		display: flex;
+		font-size: 0.8rem;
+		justify-content: space-between;
+		margin-top: 0.5rem;
+
+		& > .form-element {
+		}
+
+		label {
+			padding-right: 5px;
+		}
+	}
+}
+
+#avis .invite-avis {
+	margin-bottom:0px;
+	margin-left:10px; 
+	margin-top:10px;
+	color:#FF91FF;
+}
+
+#flux-commentaires {
+
+	.commentaire-masque {
+		display: none;
+	}
+
+	.commentaire-affiche {
+		display: block;
+	}
+
+	.commentaire-wrapper:not(:last-ot-type) {
+		border-bottom: 1px dotted $vert-tdn;
+	}
+
+	.commentaire-wrapper {
+		display: table;
+		width: 100%;
+		margin-bottom: 0px;
+
+		.avatar {
+			display: table-cell;
+			width: 50px;
+
+			.avatar-image {
+				border: 3px solid #FFF;
+				width: 40px;
+			}
+		}
+
+		.commentaire {
+			display: table-cell;
+			padding: 10px 5px;
+			vertical-align: top;
+		}
+
+		.metadata {
+			margin: 0;
+			text-align: left;
+
+			.auteur {
+				color:#000;
+				display: inline-block;
+				font-weight: bold;
+				padding-right: 0.5rem;
+			}
+
+			.date-publication {
+				color: $vert-tdn;
+				display: inline-block;
+			}
+
+			.stiletto {
+				float: right;
+				height: 19px;
+				vertical-align: middle;
+			}
+		}
+
+		.texte {
+			font-size: 0.9rem;
+			margin: 0.5rem 0;
+			min-height: 40px;
+		}
+
+		.actions-commentaires {
+			font-size: 0.9rem;
+			margin:	0;
+
+			.nombre-likes {
+				color: $vert-soutenu;
+				font-weight: 700;
+
+				&:after {
+					@include sprite-default;
+					@include coeur-vert;
+					display: inline-block;
+					margin-left: 0.2rem;
+					position: relative;
+					top: 1px;
+				}
+			}
+		}
+
+		.chaine-points {
+			 & > *:not(last-child):after {
+				content: "•";
+				color: $vert-eau;
+				padding: 0.2rem;
+			}
+		}
+	}
+
+	.pli-commentaire {
+		border-bottom: 1px solid $vert-tdn;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.pli-commentaire .lienSommaire:before {
+		@include sprite-default;
+		background-color: $blanc;
+		display: inline-block;
+		position: absolute;
+		top: 15px;
+		left: 50%;	
+	}
+
+	.pli-ferme .lienSommaire:before {
+		@include fleche-violet-bas;
+	}
+
+	.pli-ouvert .lienSommaire:before {
+		@include fleche-violet-haut;
+	}
+}
+
+.stalled {
+	display: none;
+}
+
+.unstall {
+	/*display: inline;*/
+}
+
+.unstall,
+.stalled {
+	cursor: pointer;
+	color: #752670;
+	text-decoration: none;
+}
+
+.inline-label,
+.inline-label ~ label {
+	display: inline-block;
+	margin: 0 0.5em 0 0;
+}
+
+.block-label {
+	display: block;
+	margin: 0;
+}
+
+/* Liens */
+
+.bottomTextLink {
+	display: inline-block;
+	margin: 0 0 0 5px;
+	color: #752670;
+	text-decoration: none;
+}
+.commentaire a:hover {
+	text-decoration: underline;
+}
+
+/*  .bottomTextLink:after {
+	content: ' . ';
+	margin: 0 0 0 5px;
+	font-family: $questrial;
+	font-size: 2em;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none !important;
+}*/
+
+.separateur_link {
+	color: #1ABFB8;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-family: $questrial;
+}
+
+label[for='tdn3_commentaire_simple_texteCommentaire'] {
+	display: none;
+}

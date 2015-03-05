@@ -1,0 +1,4 @@
+tdn_core:
+    resource: "@TDNCoreBundle/Resources/config/routing.xml"
+    prefix:   /
+

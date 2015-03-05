@@ -1,0 +1,58 @@
+#jms_security_extra:
+#    secure_all_services: false
+#    expressions: true
+
+security:
+    encoders:
+        TDN\Bundle\NanaBundle\Entity\Nana:
+            algorithm: md5
+            encode-as-base64: false
+            iterations: 1
+
+    role_hierarchy:
+        ROLE_PREMIUM:     ROLE_USER
+        ROLE_JOURNALISTE: [ROLE_USER, ROLE_EXPERT]
+        ROLE_EXPERT:      ROLE_USER
+        ROLE_PREMIUM:     ROLE_USER
+        ROLE_ADMIN:       [ROLE_USER, ROLE_JOURNALISTE, ROLE_EXPERT, ROLE_PREMIUM]
+        ROLE_SUPERADMIN:  [ROLE_USER, ROLE_JOURNALISTE, ROLE_EXPERT, ROLE_PREMIUM, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH, IS_AUTHENTICATED_ANONYMOUSLY]
+
+    providers:
+        main:
+            entity: { class: TDN\Bundle\NanaBundle\Entity\Nana, property: username }
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        general:
+            pattern:    ^/
+            form_login:
+                check_path: /login_check
+                login_path: /login
+                use_referer: true
+            logout:
+                path:   /logout
+                target: /
+            anonymous: ~
+            http_basic:
+               realm: "Accès protégé"
+            remember_me:
+               key:      "%secret%"
+               lifetime: 31536000 # 365 jours en secondes
+               path:     /
+               domain:   ~ # Prend la valeur par défaut du domaine courant depuis $_SERVER
+
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/_internal/secure, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+        #- { path: ^/admin, roles: ROLE_JOURNALISTE, ROLE_EXPERT }
+        #- { path: ^/admin/conseil, roles: ROLE_EXPERT }
+        - { path: ^/my-tdn, roles: ROLE_USER}
+        - { path: ^/admin, roles: [ROLE_JOURNALISTE, ROLE_EXPERT] }
+
+    # access_denied_url:
+        # /
+    

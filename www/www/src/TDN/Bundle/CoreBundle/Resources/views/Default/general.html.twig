@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<meta charset="utf-8">
+	<meta equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+	<title>{% block title %}{% endblock %} | Trucs De Nana</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.css' )}}"type="text/css">
+	<link href="{{ asset('assets/css/general.css' )}}" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="{{ asset('assets/bootstrap/js/bootstrap.js' )}}"></script>
+	<script type="text/javascript" src="{{ asset( 'assets/bootstrap/js/jquery-1.11.1.js' )}}"></script>
+	<script type="text/javascript" src="{{ asset( 'assets/js/jquery.fitvids.js' )}}"></script>
+</head>
+<body class="container">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".lecteur").fitVids();
+  });
+</script>
+
+<header class="row">
+	{% include "TDNCoreBundle:Default:header.html.twig" %}
+</header>
+<div>
+
+	<nav class="row">
+		{% include "TDNCoreBundle:Default:rubriqueScnd.html.twig" %}
+		{% include "TDNCoreBundle:Default:rubriquePpale.html.twig" %}
+	</nav>
+    <div class="row">
+        <section class="col-lg-8 blanc">
+        	{% block col_G %}{% endblock %}
+        </section>
+        <section class="col-lg-4 blanc">
+			{% include "TDNCoreBundle:Default:colD_HP.html.twig" %}
+        </section>
+    </div>
+    <div class="row">
+    	{% block actu_Com %}{% endblock %}
+    </div>
+    <footer class="row">
+		<div class="footerDesign row">
+    	 {% include "TDNCoreBundle:Default:footer_hp.html.twig" %}
+    	</div>
+	</footer>
+</div>
+</body>
+</html>

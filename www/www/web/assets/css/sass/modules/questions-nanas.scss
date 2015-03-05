@@ -1,0 +1,50 @@
+.enveloppe-question {
+	margin-bottom: 1rem;
+
+	.colonne:first-of-type {
+		width: 120px;
+	}
+}
+
+.enveloppe-avis {
+	@include bloc-vert;
+	margin-bottom: 1rem;
+
+	.titre-avis:before {
+		@include sprite(40px, 40px	);
+		@include interrogation;
+		@include en-ligne;
+	}
+}
+
+.enveloppe-reponse {
+	
+}
+
+.back-actions {
+	text-align: right;
+	list-style: none;
+
+	li:not(:last-of-type):after {
+		content: "•";
+		color: $vert-tdn;
+	}
+}
+
+.statistiques {
+	display: table;
+	margin-top: 2rem;
+	width: 100%;
+
+	.cardinal {
+		display: table-cell;
+		text-align: center;
+	}
+}
+
+@each $rubrique in (beaute, deco, mode, geekette, recettes, bien-etre, a-la-une, sexo-psycho) {
+	.bulle_#{$rubrique} {
+		@include sprite-default;
+		@extend %bulle-#{$rubrique}-contour;
+	}
+}

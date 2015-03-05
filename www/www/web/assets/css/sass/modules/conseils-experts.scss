@@ -1,0 +1,48 @@
+.colonne {
+	display: table-cell;
+	vertical-align: top;
+
+	&:not(:last-of-type) {
+		padding-right: 10px;
+	}
+}
+
+.enveloppe-question {
+	clear: both;
+	margin-bottom: 1rem;
+
+	.titre-question:before {
+		@include sprite(40px, 40px);
+		@include interrogation;
+		@include en-ligne;
+	}
+
+	.colonne:first-of-type {
+		width: 80px;
+	}
+
+	.illustration-conseil {
+		float: right;
+		margin-top: 20px;
+		max-width: 150px;
+	}
+}
+
+.enveloppe-reponse {
+	@include bloc-vert;
+
+	.titre-reponse:before {
+		@include sprite(40px, 40px);
+		@include interrogation;
+		@include en-ligne;
+	}
+
+	.colonne:first-of-type {
+		width: 80px;
+	}
+}
+
+.enveloppe-contenu .corps img.vignette-avatar {
+	border: 1px solid $vert-tdn;
+	width: 100%;
+}

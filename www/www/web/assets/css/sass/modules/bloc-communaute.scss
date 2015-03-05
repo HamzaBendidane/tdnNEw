@@ -1,0 +1,155 @@
+.infos-communaute {
+	display: block;
+}
+
+#en-direct {
+
+	padding-bottom: 0.5rem;
+
+	h4 {
+		color: $vert-tdn;
+	}
+}
+
+.entreeJournal {
+	clear: both;
+
+		&:not(:last-of-type) {
+		border-bottom: 2px dotted $vert-tdn;
+		padding-bottom: 6px;
+		margin-bottom: 6px;		
+	}
+
+	.avatarEntree {
+		float: left;
+		margin: 0.5rem;
+
+		img {
+			width: 30px;
+		}
+	}
+
+	.dateEntree {
+		color: $vert-tdn;
+		font-size: 0.65rem;
+	}
+
+	.texteEntree {
+		font-size: 0.8rem;
+	}
+}
+
+.nana-semaine {
+	@include sprite-default;
+	@include nanas-semaine;
+	text-align: center;
+
+	@media (max-width:1200px) {
+		height : inherit;	
+		background : inherit;
+		
+	}
+
+	img {
+		position: relative;
+		top: 18px;
+		width : 90%;
+		/*left: 12px;*/
+		
+		@media (max-width: 1200px) {
+			top : inherit;
+			width :	50%;
+			margin : 0 auto ;	
+		}
+	}
+
+	figcaption {
+		position: relative;
+		/* top: 30px; */ 
+
+		.nana-pseudo {
+			color: $violet-tdn;
+			margin: 1rem 0 0;
+		}
+
+		.nana-caption {
+			font-size: 0.8rem;
+			margin: 0;
+		}
+	}
+}
+
+.recherche-membre {
+	background-color: $violet-tdn;
+	width: 250px;
+	border-radius: 20px;
+	float: right;
+	margin: 6px auto;
+	line-height: 20px;
+	font-size: 0.8rem;
+	padding: 4px 0;
+
+	#seed {
+		display: inline-block;
+		font-size: 0.8rem;
+		line-height: 1rem;
+		margin-left: 20px;
+		width: 190px;
+	}
+
+	.submitter {
+		@include sprite-default;
+		@include bouton-loupe;
+		vertical-align: middle;
+	}
+}
+
+.bloc-nanas {
+	padding-top: 1rem;
+}
+
+.nouvelles-nanas {
+
+	.nana-stamp {
+		@include sprite-default;
+		@include icone-communaute-nanas;
+		float: left;
+		margin-right: 1rem;
+
+		.cardinal {
+			color: white;
+			position: relative;
+			top: 2px;
+			left: 10px;
+			width: 50px;
+			text-align: center;
+		}
+	}
+
+	.intertitre-selection {
+		clear:both;
+		border-bottom: 1px solid #333;
+		margin: -20px 5px 20px;
+
+		h4 {
+		    color: #333;
+		    display: inline-block;
+		    padding: 0px 10px 0px 5px;
+		    position: relative;
+		    top: 7px;
+		}
+	}
+
+	.scotchee {
+		@include sprite-default;
+		@include nanas-inscription-recente;
+		display: inline-block;
+
+		.vignetteScotchee {
+			width: 80%;
+			position: relative;
+			top: 11px;
+			left: 7px;
+		}
+	}
+}

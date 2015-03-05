@@ -1,0 +1,202 @@
+.sommaire {
+	.carte {
+		background-color: $blanc;
+		border-radius: 4px;
+		display: inline-block;
+		margin: 0.5rem 0.2rem;
+		padding: 0.5rem;
+		vertical-align: top;
+
+		&.verticale {
+
+			.vignette {
+				max-width: 100px;
+			}
+			
+			.illustration {
+				display: inline-block;
+			}
+			
+			.presentation {
+				display: inline-block;
+				width: calc(100% - 120px);
+				vertical-align: top;
+				margin-left: 0.5rem;
+				position: relative;
+				height: 100%;
+				text-align: left;
+
+				.auteur {
+					margin: 0;
+				}
+
+				.publication {
+					font-size: 0.7rem;
+					color: $vert-tdn;
+					margin: 0;
+				}
+
+				.titre {
+					font-size: 0.9rem;
+					margin-top: 0;
+					text-align: left;
+				}
+
+				.expert {
+					color: #999;
+					font-size: 0.9rem;
+					margin-top: 1rem;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.snapshot {
+			width: 100%;
+		}
+
+		.titre {
+			text-align: justify;
+			font-weight: bold;
+			font-size: 0.9rem;
+			line-height: 1.2rem;
+			margin: 1rem 0px;
+		}
+
+		.metadata {
+			align-items: baseline;
+			display: flex;
+			font-size: 0.8rem;
+			justify-content: space-between;
+			margin-bottom: 0;
+
+			.publication {
+			    color: #999;
+			}
+
+			.vues {
+				color: $vert-soutenu;	
+			}
+		}
+	}	
+}
+
+.liste-questions {
+
+	.featured {
+		background-color: $blanc;
+		border-radius: 4px;
+		display: flex;
+	}
+
+	.stats {
+		display: inline-block;
+		padding-top: 70px;
+		vertical-align: top;
+		width: calc(33.3% - 1rem);
+	}
+
+	.presentation {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(66.6% - 1rem);
+	}
+
+}
+
+.liste-concours {
+
+	.featured {
+
+		.titre {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+
+		.metadata {
+			margin-top: 120px;
+		}
+	}
+
+	.etiquette:before {
+		color: $vert-soutenu;
+		padding-right: 4px;		
+	}
+
+	.etiquette {
+		color: #999;
+	}
+
+	.type-tirage:before {
+		content: 'Type de jeu : ';
+	};
+
+	.date-limite:before {
+		content: 'Date limite : ';
+	};
+
+	.cloture:before {
+		content: 'Clos ';
+	};
+
+	.bouton-participe {
+		clear: both;
+		text-align: right;
+		padding: 1rem;
+	}
+}
+
+.enveloppe-sommaire {
+
+	.suite-contenus {
+
+		background-color: $vert-eau;
+		color: #9B0083;
+		text-align: right;
+		
+		.bouton-suite {
+			cursor: pointer;
+			display: inline-block;
+			padding: 1rem;
+		}
+	}
+}
+
+.selecteur-tdn {
+	float: right;
+	position: relative;
+	right: 1rem;
+	top: 1rem;
+
+	.select {
+		position: absolute;
+		width: 177px;
+		height: 23px;
+		color: #000;
+		overflow: hidden;
+		background-color: $blanc;
+		background-image: url('/assets/images/theme/forms/select-sommaire_177x23.png');
+		background-repeat: no-repeat;
+		padding: 0px 24px 0px 8px;
+		font-size: 12px;
+		line-height: 23px;
+	}
+
+	select.styled {
+		position: relative;
+		width: 177px;
+		opacity: 0;
+		z-index: 5;
+	}
+}
+
+.incipit-sommaire {
+	font-size: 1.2em;
+	margin: 0.5rem 0;
+	font-style: italic;
+
+	.hot-number {
+		font-size: 1.6rem;
+	}
+
+}

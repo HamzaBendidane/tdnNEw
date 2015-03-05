@@ -1,0 +1,121 @@
+.inscription-rapide {
+
+	.enveloppe-incitation {
+		background-color: $violet-tdn;
+		display: flex;
+		padding: 1rem;
+		vertical-align: middle;
+	}
+	
+	.incitation-inscription {
+		color: white;
+		display: inline-block;
+		font-size: 1.2rem;
+		font-style: italic;
+		margin: 0 0 0 1rem;
+		padding: 0.5rem;
+		position: relative;
+		width: 75%;
+	}
+
+	.picto-mytdn {
+		@include sprite-default;
+		@include picto-mytdn;
+		display: inline-block;
+		top: 0;
+	}
+
+	.section-arguments,
+	.section-inscription {
+		background-color: $rose-tdn;
+		display: table-cell;
+		vertical-align: top;
+		padding: 1rem;
+	}
+
+	.section-arguments {
+
+		min-width: 45%;
+
+		.pourquoi {
+			font-size: 1.2rem;
+			margin: 1rem 0 2rem;
+		}
+
+		.blocwhy {
+			font-size: 0.9rem;
+		}
+
+		.numero {
+			background-color: $blanc;
+			border-radius: 50%;
+			display: inline-block;
+			font-weight: 700;
+			margin-right: 0.4rem;
+			padding: 4px 9px;
+		}
+	}
+
+	.section-inscription {
+
+		padding: 1rem 2rem;
+
+		.bloc-inscription {
+			background-color: $blanc;
+			border-radius: 6px;
+			padding: 1rem;
+		}
+	}
+
+	.public-form {
+
+		.stitre {
+			color: $violet-tdn;
+			font-weight: 700;
+			position: relative;
+			text-align: center;
+			top: -12px;
+		}
+
+		.stitre:after {
+			@include sprite-default;
+			@include logo-mytdn-petit;
+			display: inline-block;
+			position: relative;
+			top: 12px;
+		}
+
+		.markRequirement {
+
+			margin: 1rem 0;
+
+			label {
+				min-width: 110px;
+				font-size: 0.9rem;
+				font-weight: 400;
+				padding-right: 0.5rem;
+				text-align: right;
+			}
+		}
+	}
+}
+
+#tdn_nana_inscription_user_dateNaissance,
+#tdn_nana_inscription_user_sexe,
+#tdn_nana_inscription_user_offresPartenaires {
+
+	display: inline-block;
+
+	input {
+		margin: 0 4px 0 20px;
+	}
+
+	select {
+		margin: 0 5px;
+	}
+
+	label {
+		min-width: 40px;
+		text-align: left;
+	}
+}

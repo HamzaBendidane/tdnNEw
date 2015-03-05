@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping 
+	xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" 
+	xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="TDN\Bundle\QuizBundle\Entity\ResultatsQuiz"
+			repository-class="TDN\Bundle\QuizBundle\Entity\ResultatsQuizRepository">
+
+		<id name="id" type="integer" column="id">
+			<generator strategy = "AUTO" />
+		</id>
+		<field name="participant" type="integer" column="key_participant" />
+		<field name="profil" type="string" column="id_profil" />
+		<field name="details" type="text" column="details" />
+		<field name="createdAt" type="datetime" column="createdAt" />
+
+		<many-to-one field="lnQuiz" target-entity="Quiz" inversed-by="resultats" >
+			<join-column name="ln_quiz" referenced-column-name="id" />
+		</many-to-one>
+	
+	</entity>
+	
+</doctrine-mapping>

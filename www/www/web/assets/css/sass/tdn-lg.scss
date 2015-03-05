@@ -1,0 +1,237 @@
+@import "fonts/tdn-fonts.scss";
+
+@import "primitives/couleurs.scss";
+@import "primitives/tailles.scss";
+@import "primitives/marges.scss";
+@import "primitives/sprite.scss";
+@import "primitives/blocs.scss";
+@import "primitives/cadres.scss";
+@import "primitives/headers.scss";
+
+@import "modules/mixins.scss";
+@import "modules/sprite.scss";
+@import "modules/reseaux-sociaux.scss";
+@import "modules/page-lg.scss";
+@import "modules/home-lg.scss";
+@import "modules/bloc-bandeau-vert.scss";
+@import "modules/entete-lg.scss";
+@import "modules/footer-lg.scss";
+@import "modules/colonne-laterale.scss";
+@import "modules/coins-images.scss";
+@import "modules/titres.scss";
+@import "modules/videos-recentes.scss";
+@import "modules/colonnes.scss";
+@import "modules/pastilles.scss";
+@import "modules/tiroir.scss";
+@import "modules/page-contenu.scss";
+@import "modules/page-sommaire.scss";
+@import "modules/conseils-experts.scss";
+@import "modules/questions-nanas.scss";
+@import "modules/commentaires.scss";
+@import "modules/forms.scss";
+@import "modules/forms-nanas.scss";
+@import "modules/nanas.scss";
+@import "modules/slider.scss";
+@import "modules/bloc-communaute.scss";
+@import "modules/inscription.scss";
+@import "modules/boutons.scss";
+@import "modules/fiche-equipe.scss";
+@import "modules/messages.scss";
+@import "modules/recherche.scss";
+@import "modules/popins.scss";
+@import "modules/galeries.scss";
+@import "modules/dossier.scss";
+
+.tiroir {
+  background-color: #960080;
+  height: auto; }
+
+.pub-h {
+  height: 90px;
+  margin: 40px 0;
+  background-color: #777777; }
+
+.bg-blanc {
+  background-color: white;
+  /*padding: 0 10px 0 10px;*/
+}
+
+body {
+  color: $anthracite;
+}
+
+h3 {
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type="submit"] {
+      background-color: transparent;
+      border: none;
+}
+
+.ariane {
+		background-color : white;
+		/* border-top : 2px solid $violet-tdn; */
+		display : block;
+		float : left ;
+		position : relative;
+		font-size : 14px;
+		padding : 12px 0 11px 10px;
+		width : 63%;
+		left : 20px;
+
+		.arianeSep {
+			color : $violet-tdn;				
+		}
+		
+		.arianeCourant,.arianeSep {
+			font-weight : bold ;	
+		}
+		
+		@media (max-width: 980px) {
+			left : inherit;
+			width : 100%;
+			float : inherit;
+			border-top : inherit;			
+		}
+}
+
+
+
+@media (min-width: 980px) {
+  .bloc-recherche {
+    float: right;
+    background-color: white;
+    text-align: center;
+    /*border-top: 2px solid #9b0083;*/
+    padding-left: 10px;
+    width: 31.8%;
+	margin-right : 12px; 
+	
+    .recherche-rapide {
+      margin-bottom: 1rem;
+    }
+
+    .reseaux-sociaux {
+      margin: 1rem 0;
+    }
+  }
+
+  .annexes {
+    float: right;
+  }
+}
+
+@media (max-width: 980px) {
+  .bloc-recherche {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0rem 2rem 0.5rem;
+
+    .recherche-rapide {
+      width: 80%;
+    }
+
+    .reseaux-sociaux {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+
+  
+}
+	@media (max-width: 630px) {
+		.bloc-recherche {	
+			display : block;	
+			width : 100%;
+			text-align : center;
+			
+			.recherche-rapide {
+     			 width:100%;
+				 display:block;
+    		}
+			
+			.reseaux-sociaux {
+				width: 100%;
+				margin-top : 20px;
+				justify-content: space-between;
+			}
+		}
+	}
+
+.scene {
+  padding: 1rem;
+}
+
+.point {
+  background-color: white;
+  border-bottom: dotted #96d8dc 2px; }
+
+.bmenu {
+  border-bottom: solid #9b0083 1.5px; }
+
+.menu_h_mobile {
+  height: 85px;
+  background: #FFF;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 100; }
+
+.adjuste {
+  height: 85px;
+  background-color: #9b0083;
+  z-index: 10; }
+
+.fixe {
+  position: fixed; }
+
+ul.rubriques {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 50px; }
+
+.rubriques li {
+  list-style: none;
+  background-color: white; }
+
+#colonne-principale {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.standard-etiquette {
+  color: $vert-tdn;
+}
+
+.float-wrapper {
+  overflow: auto;
+  overflow: auto;
+}
+
+.separationBlockFullWidth {
+	background-color : $blanc;
+
+	.separationTop {
+		margin : 0 auto;
+		width : 97%;
+		height : 2px;
+		background-color : $violet-tdn;
+	}
+	
+}
+
+.bloc-plus-lus {
+	margin-bottom : 20px;	
+}

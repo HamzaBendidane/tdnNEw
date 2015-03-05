@@ -1,0 +1,42 @@
+<!-- Bloc pour les boutons sociaux -->
+<div class="liens-sociaux" id="bloc-liens-sociaux">
+	<div class="liens-tdn">
+		<a href="{#{ path('Document_aime', {'id': id}) }#}">
+			<div class="bouton-social bouton-like" id="bouton-like" onclick="ga('send', 'event', 'Like', 'Vote', 'Page', '1');">
+				<span class='icone'>{{ likes }}</span>
+			</div>
+		</a>
+		<a class="popin" href="{#{ path('Nana_partage', {'id': id}) }#}">
+			<div class="bouton-social bouton-partage" id="bouton-partage">
+				<span class='icone'>Partage</span>		
+			</div>
+		</a>
+			<div class="bouton-social bouton-print" id="bouton-print">
+				<span class='icone'>Imprimer</span>		
+			</div>
+		</a>
+	</div>
+	<div class="liens-externes">
+		<!-- Emplacement pour le bouton Like de Facebook -->
+		<div class="bouton-social bouton-facebook">
+			<a class='icone' href="http://www.facebook.com/sharer.php?u=http://www.trucsdenana.com.com/" target="_blank">Facebook</a>
+		</div>
+		<!-- Tweet -->
+		<div class="bouton-social bouton-twitter">
+			<a class='icone' href="http://www.twitter.com/share?url=http://www.trucsdenana.com.com/&amp;text=" target="_blank">Twitter</a>
+		</div>
+	<!-- <div style="text-align:left;margin-top:4px"> -->
+		<!-- AddThis -->
+		<!-- AddThis Button BEGIN -->
+		<!-- <a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&amp;username=ferdydurke"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ferdydurke"></script> -->
+		<!-- AddThis Button END -->
+	<!-- </div>		 -->
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.bouton-print').click(function() {
+			window.print();
+		})
+	}
+</script>
