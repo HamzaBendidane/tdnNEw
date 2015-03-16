@@ -3,6 +3,19 @@
 	margin: 1rem 0;
 	position: relative;
 
+	.liste-dossiers .featured article {
+		
+		min-height : 160px;
+			
+	}
+
+
+	.liste-dossiers article{
+	
+		min-height : 130px;
+	
+	}
+
 	article {
 		/*background-color: $blanc;*/ 
 		border-radius: 4px;
@@ -34,6 +47,14 @@
 			padding: 0.5rem;
 			transition: all 0.2s cubic-bezier(0.26, 0.06, 0.3, 0.76) 0s;
 		}
+		
+		&.par-conseils, &.par-concours {
+			min-height : 180px;	
+		}
+		
+		&.par-videos {
+			min-height : 285px;	
+		}
 	}
 
 	.bandeau {
@@ -47,6 +68,7 @@
 	h3 {
 		font-size : 1rem;
 		margin: 1.5rem 0 0.2rem 88px;
+		font-weight : bold;
 	}
 
 	.apropos {

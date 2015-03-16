@@ -180,11 +180,11 @@
       {% if productions['questions'] is not empty %}
       <section id="ses-questions">
         <div class="bloc-production bloc-bandeau">
-          <div class="bandeau fond-vert row">
-              {% if productions['questions'] is not empty %}
-                <a href="" class="lien-propos voir-activite">Voir +</a>
-              {% endif %}
+          <div class="bandeau fond-vert row">              
            <h4>Ses questions de nanas</h4>
+		   {% if productions['questions'] is not empty %}
+                <a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+              {% endif %}
          </div>
          <div class="hot row colonnes-2">
            {% for q in productions['questions'] %}
@@ -215,11 +215,11 @@
     {% if productions['commentaires'] is not empty %}
     <section id="ses-commentaires">
       <div class="bloc-production bloc-bandeau">
-        <div class="bandeau fond-vert row">
-              {% if productions['commentaires'] is not empty %}
-                <a href="" class="lien-propos voir-activite">Voir +</a>
-              {% endif %}
+        <div class="bandeau fond-vert row">              
            <h4>Ses commentaires</h4>
+		   		{% if productions['commentaires'] is not empty %}
+                	<a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+              	{% endif %}
          </div>
          <div class="hot row">
          {% for p in productions['commentaires'] %}
@@ -249,11 +249,11 @@
       {% if productions['reponses'] is not empty %}
       <section id="ses-reponses">
         <div class="bloc-production bloc-bandeau">
-          <div class="bandeau fond-vert row">
-              {% if productions['reponses'] is not empty %}
-                <a href="" class="lien-propos voir-activite">Voir +</a>
-              {% endif %}
+          <div class="bandeau fond-vert row">              
              <h4>Ses réponses</h4>
+			 	{% if productions['reponses'] is not empty %}
+                <a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+              {% endif %}
            </div>
            <div class="hot row colonnes-2">
            {% for p in productions['reponses'] %}
@@ -280,11 +280,11 @@
       {% if productions['articles'] is not empty %}
       <section id="ses-articles">
         <div class="bloc-production bloc-bandeau">
-          <div class="bandeau fond-vert row">
-              {% if productions['articles'] is not empty %}
-                <a href="" class="lien-propos voir-activite">Voir +</a>
-              {% endif %}
+          <div class="bandeau fond-vert row">              
              <h4>Ses articles</h4>
+			 {% if productions['articles'] is not empty %}
+                <a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+              {% endif %}
           </div>
           <div class="hot row colonnes-2">
             {% for a in productions['articles'] %}
@@ -328,11 +328,11 @@
       {% if productions['conseils'] is not empty %}
       <section id="ses-conseils">
         <div class="activite-expert bloc-bandeau">
-          <div class="bandeau fond-vert row">
-              {% if productions['conseils'] is not empty %}
-                <a href="" class="lien-propos voir-activite">Voir +</a>
-              {% endif %}
+          <div class="bandeau fond-vert row">              
               <h4>Ses conseils</h4>
+			  {% if productions['conseils'] is not empty %}
+                <a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+              {% endif %}
           </div>
           <div class="hot row colonnes-2">
             {% for rd in productions['conseils'] %}
@@ -372,10 +372,11 @@
     {% endif %}
     <div class="activite-expert bloc-bandeau {{ hasElements }}">
       <div class="bandeau fond-vert row">
-      {% if likes is not empty %}
-        <a href="" class="lien-propos voir-activite">Voir +</a>
-      {% endif %}
+      
         <h4>Ce qu'elle aime sur TDN ({{ likes|length }})</h4>
+		{% if likes is not empty %}
+        <a href="" class="lien-propos voir-activite propos-right">Voir +</a>
+      {% endif %}
       </div>
       <div class="hot row colonnes-2">
         {% for isLiked in likes %}

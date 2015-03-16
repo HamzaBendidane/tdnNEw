@@ -1,5 +1,16 @@
-<nav id="rubriquesNavigation">
-	<ul class="menuRubriques">
+<nav id="rubriquesNavigation" class="navbar navbar-default" >
+	<div class="container-fluid">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          
+          </div>
+	<div class="navbar-collapse collapse" id="navbar">
+	<ul class="nav navbar-nav menuRubriques">
 	{% for rubriquePrincipale in princeps %}
 	{% set menu = rubriquePrincipale.slug %}
 	{% set titre = rubriquePrincipale.titre %}
@@ -15,11 +26,14 @@
 		</li>
 	{% endfor %}
 	</ul>
+	</div><!--/.nav-collapse -->
+</div><!--/.container-fluid -->
+	
 </nav>
 <script type="text/javascript">
 
 	$(document).ready(function () {
-		$('.mainMenuLabel').on('mouseenter', function (event) {
+		$('li.itemRubrique').on('mouseenter', function (event) {
 			$(this).closest('.menuRubriques').find('.menu-visible').each(function () {
 				$(this).toggleClass('menu-visible menu-masque');
 				// var rubrique = menu.data('rubrique');
@@ -30,7 +44,7 @@
 			// menu.toggleClass('menu-'+rubrique+"-selected");
 			$(this).closest('.itemRubrique').find('.subMenu').toggleClass('menu-visible menu-masque')
 		});
-		$('.itemRubrique').on('mouseleave', function () {
+		$('li.itemRubrique').on('mouseleave', function () {
 			$(this).find('.subMenu').each(function () { 
 				$(this).toggleClass('menu-visible menu-masque')
 				// var menu = $(this).closest('.main-menu');

@@ -20,6 +20,10 @@
 		padding: 0.3rem 0px;
 		margin: 0px 20px;
 		border-bottom: 1px solid #CCC;
+		
+		@media screen and (max-width: 630px) {
+				display : block;
+		}
 	}
 
 	.itemContenu {
@@ -114,7 +118,11 @@
 		&:after {
 			clear:both;
 		}
-
+		
+		@media screen and (max-width: 740px) {
+			padding : 0 20px;	
+		}
+		
 		@media screen and (max-width: 630px) {
 			display : block;
 			
@@ -335,11 +343,12 @@
 		z-index: 400;
 		
 		@media screen and (max-width: 590px) { 
-			 	margin-left : 0;	
+			 	margin : 0 auto;	
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;			
 		 		white-space : inherit;
 				position : relative;
+				width : 95%;	
 		}
 
 

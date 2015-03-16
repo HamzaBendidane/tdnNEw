@@ -20,8 +20,9 @@
 			{% set open = 0%}
 		<section  id="tabsResultats-{{type}}" class="resultats bloc-bandeau">
 			<header class="bandeau fond-vert row widget-liste-{{ cssType|lower }}">
-				<a href="#" class="lien-propos lien-ouvrir">Tout voir</a>
+				
 				<h1 class="titre-icone">{{ resultats|length }} {{ type }}</h1>
+				<a href="#" class="lien-propos lien-ouvrir propos-right">Tout voir</a>
 			</header>
 			<div class="hot row">				
 			{% for r in resultats %}

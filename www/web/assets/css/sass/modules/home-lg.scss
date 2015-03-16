@@ -8,6 +8,20 @@
 	margin: 1.2rem 1rem 0.5rem 0;
 }
 
+
+.propos-right {
+	position : absolute;
+	top : 8px;
+	right : 0;	
+	font-size : 0.9rem;
+	
+	@media (max-width: 630px) {
+		top : 27px;
+			
+		
+	}
+}
+
 .fond-vert {
 	background-color: $vert-tdn;
 }
@@ -98,6 +112,11 @@
 		position: absolute;
 		top: -10px;
 		right: 48px;
+		
+		@media (max-width: 630px) {
+			Background-image : inherit;	
+		}
+		
 	}
 
 	.hot {
@@ -110,6 +129,10 @@
 	color: $violet-tdn;
 	margin: 1rem 1rem 0 0;
 	text-align: right;
+}
+
+.lienSommaire a {
+	font-size : 0.9rem;
 }
 
 .bloc-conseil {

@@ -31,6 +31,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 	<script type="text/javascript" src="{{ asset( 'assets/js/jquery.fitvids.js' )}}"></script>
+	<script type="text/javascript" src="{{ asset( 'assets/bootstrap/js/bootstrap.min.js' )}}"></script>
 
 	<!-- Affliliation aufeminin.com -->
 	<script type="text/javascript">
@@ -63,10 +64,16 @@
 	<!-- Cadre global de la page -->
 	<div id="colonne-principale" class="container">
 		
-		<!-- My TDN -->
+	<!-- My TDN -->
+	{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+	<div id="mytdn" class="container row mytdn-closed connected">
+	{% else %}
 		<div id="mytdn" class="container row mytdn-closed">
-		{% render(controller("TDNNanaBundle:MyTDN:tiroir")) %}
-		</div>
+	{% endif %}
+                {% render(controller("TDNNanaBundle:MyTDN:tiroir")) %}
+
+
+                </div>
 
 		<!-- Entête -->
 		<div class="row">

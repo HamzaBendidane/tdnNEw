@@ -160,7 +160,7 @@
 
 .mytdn-closed {
 	top: -171px;
-	opacity : 0.5;
+	/*opacity : 0.5; */U
 	.indicateur-etat-tiroir {
 		@include sprite-default;
 		@include mytdn-open;
@@ -173,11 +173,19 @@
 		.mytdn-closed {
 			top : -203px;	
 		}
+		
+		.connected.mytdn-closed {
+			top : -418px;
+		}
 }
 
 @media screen and (max-width: 1005px) {
 		.mytdn-closed {
 			top : -224px;	
+		}
+		
+		.connected.mytdn-closed {
+			top : -438px;
 		}
 }
 
@@ -185,11 +193,17 @@
 		.mytdn-closed {
 			top : -326px;	
 		}
+		.connected.mytdn-closed {
+			top : -531px;
+		}
 }
 
 @media screen and (max-width: 664px) {
 		.mytdn-closed {
 			top : -350px;	
+		}
+		.connected.mytdn-closed {
+			top : -531px;
 		}
 }
 
@@ -197,6 +211,9 @@
 		.mytdn-closed {
 			top : -358px;
 				
+		}
+		.connected.mytdn-closed {
+			top : -531px;
 		}
 }
 
@@ -206,12 +223,19 @@
 			top : -358px;
 				
 		}
+		
+		.connected.mytdn-closed {
+			top : -531px;
+		}
 }
 
 @media screen and (max-width: 460px) {
 		.mytdn-closed {
 			top : -304px;
 				
+		}
+		.connected.mytdn-closed {
+			top : -397px;
 		}
 }
 
@@ -223,17 +247,26 @@
 		#mytdn-grip {
 			right : inherit;		
 		}
+		.connected.mytdn-closed {
+			top : -397px;
+		}
 }
 
 @media screen and (max-width: 325px) {
 		.mytdn-closed {
 			top : -443px;	
 		}
+		.connected.mytdn-closed {
+			top : -397px;
+		}
 }
 
 @media screen and (max-width: 304px) {
 		.mytdn-closed {
 			top : -443px;	
+		}
+		.connected.mytdn-closed {
+			top : -397px;
 		}
 }
 

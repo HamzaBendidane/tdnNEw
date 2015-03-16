@@ -27,7 +27,7 @@
     {{ form_widget(form.precisions|e, {'attr': {'class': 'champ-profil champ-bloc'}}) }}
 	<div id="tdn_nana_hobbies_lnHobbies_galleryHobby" class="galerie-hobby" data-prototype="{{ _self.hobbyImageBuilder(form.children['galerieHobby'])|e }}">
     </div>
-    <a id="bouton-ajout-image" class="lien-propos" href="#">Ajouter une image</a>
+    <a id="bouton-ajout-image" class="lien-propos propos-right" href="#">Ajouter une image</a>
     {#{ form_rest(form) }#}
 	<div class="bouton-fleche-blanche">
 		<button class="bouton">Enregistrer</button>
@@ -62,8 +62,7 @@
 
 	<section id="galerie-hobbies" class="fond-simple">
 		<header class="titre-inline">
-		{% set compteHobbies = me.lnHobbies|length %}
-			<a href="{{ path('Nana_ajouterHobby') }}" id="bouton-ajout-passion" class="popin lien-propos">Ajoute une passion</a>
+		{% set compteHobbies = me.lnHobbies|length %}			
 		{% if compteHobbies == 0 %}
 			<h2>Dis-nous quelles sont tes passions dans la vie !</h2>
 		{% elseif compteHobbies == 0 %}
@@ -71,6 +70,7 @@
 		{% else %}
 			<h2>Mes {{ compteHobbies }} passions dans la vie</h2>
 		{% endif %}
+		<a href="{{ path('Nana_ajouterHobby') }}" id="bouton-ajout-passion" class="popin lien-propos propos-right">Ajoute une passion</a>
 		</header>
 		<div class="hobby-wrapper">
 			<form name="formModificationHobby" id="formModificationHobby" class="closed-field" action="{{ path('NanaBundle_myHobbyModifier')}}" method="post" {{ form_enctype(form_hobbies) }}>
