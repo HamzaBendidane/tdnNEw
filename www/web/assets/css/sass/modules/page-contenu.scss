@@ -75,6 +75,8 @@
 
 	.corps {
 
+		padding-top: 3rem;
+
 		h2 {
 			color: $vert-soutenu;
 		}
@@ -140,7 +142,7 @@
 	border-radius: 6px;
 	background-color: $vert-tdn;
 	margin-top: 3em 0;
-	padding: 6px;
+	padding: 8px 0 5px 8px;
 
 	.bouton-social {
 		background-color: white;
@@ -180,21 +182,27 @@
 		.bouton-like {
 
 			.icone:before {
-				background-color: #333;
+				background-color: #FFF;
+				background-image: url("../../img/sprite-2.png");
+				background-position: -39px -1353px ;
 			}
 		}
 
 		.bouton-partage {
 
 			.icone:before {
-				background-color: #333;
+				background-color: #FFF;
+				background-image: url("../../img/sprite-2.png");
+				background-position:-488px -1323px ;
 			}
 		}
 
 		.bouton-print {
 
 			.icone:before {
-				background-color: #333;
+				background-color: #FFF;
+				background-image: url("../../img/sprite-2.png");
+				background-position: -10px -1353px;
 			}
 		}
 	}
@@ -203,18 +211,22 @@
 		display: inline-block;
 		text-align: right;
 		width: 49%;
-
+	
 		.bouton-facebook {
 
 			.icone:before {
-				background-color: #333;
+				background-color: #FFF;
+				background-image: url("../../img/sprite-2.png");
+				background-position: -364px -1325px ;
 			}
 		}
 
 		.bouton-twitter {
 
 			.icone:before {
-				background-color: #333;
+				background-color: #FFF;
+				background-image: url("../../img/sprite-2.png");
+				background-position: -399px -1324px	 ;
 			}
 		}
 	}
