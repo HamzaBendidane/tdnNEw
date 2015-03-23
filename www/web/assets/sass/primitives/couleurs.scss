@@ -1,0 +1,54 @@
+$blanc: #FFF;
+$anthracite: #333;
+$vert-eau: #E8F9F8;
+$vert-tdn: #96D8DC;
+$vert-soutenu: #448A8A;
+$violet-tdn: #9B0083;
+$violet-secondaire: #960080;
+$violet-tertiaire: #6F005F;
+$rose-tdn: #FDD0F7;
+
+/* couleurs texte */
+
+$alauneTexte: #F90;
+$beauteTexte: #F69;
+$bienEtreTexte: #0C6;
+$decoTexte: #069;
+$geeketteTexte: #666;
+$modeTexte: #3CF;
+$sexoPsychoTexte: #F30;
+$recettesTexte: #A27951;
+
+
+
+/* couleurs secondaires */
+
+$aLaUneSecondaire : #FFEFD6;
+$beauteSecondaire : #FFE59D;
+$decoSecondaire : #D4E5EE;
+$geeketteSecondaire : #EEE;
+$modeSecondaire : #D6F;
+$bienEtreSecondaire : #A6EDCA;
+$sexoPsychoSecondaire : #FFDED6;
+$recettesSecondaire : #E2D5C6;
+$a-la-une-secondaire : #FFEFD6;
+$beaute-secondaire : #FFE59D;
+$deco-secondaire : #D4E5EE;
+$geeketteSecondaire : #EEE;
+$mode-secondaire : #D6F;
+$bien-etre-secondaire : #A6EDCA;
+$sexo-psycho-secondaire : #FFDED6;
+$recettes-secondaire : #E2D5C6;
+
+/* classes primitives */
+
+.blanc {
+	color:	$blanc;
+}
+
+@each $rubrique in (beaute, deco, mode, geekette, recettes, bien-etre, a-la-une, sexo-psycho) {
+
+	.texte_#{$rubrique} {
+		color: $violet-tdn;
+	}
+}

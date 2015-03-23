@@ -13,6 +13,7 @@ class PartielsController extends Controller {
 		$variables['messageEmpty'] = 'Aucun article publié sur TDN';
 		$variables['lienSommaire'] = 'Tous les articles';
 		$variables['classeEntite'] = 'Article';
+		$variables['key'] = 'articles';
 
 	    $em = $this->get('doctrine.orm.entity_manager');      
 		$rep = $em->getRepository('TDN\Bundle\RedactionBundle\Entity\Article');

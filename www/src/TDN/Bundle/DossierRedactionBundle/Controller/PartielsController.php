@@ -19,7 +19,7 @@ class PartielsController extends Controller {
 		$variables['messageEmpty'] = 'Aucun dossier publié sur TDN';
 		$variables['lienSommaire'] = 'Tous les dossiers de la rédaction';
 		$variables['classeEntite'] = 'DossierRedaction';
-
+		$variables['key'] = 'articles';
 	    $em = $this->get('doctrine.orm.entity_manager');      
 		$repConseil = $em->getRepository('TDN\Bundle\DossierRedactionBundle\Entity\Dossier');
 		if (is_array($panel)) {

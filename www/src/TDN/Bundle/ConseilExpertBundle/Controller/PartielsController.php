@@ -22,8 +22,10 @@ class PartielsController extends Controller {
 		$variables['messageEmpty'] = 'Aucun conseil publié sur TDN';
 		$variables['lienSommaire'] = 'Tous les conseils des experts';
 		$variables['classeEntite'] = 'ConseilExpert';
-
-	    $em = $this->get('doctrine.orm.entity_manager');      
+		$variables['key'] = 'conseils-experts';
+		$variables['pkey'] = 'conseil-expert/demande';
+	    	
+		$em = $this->get('doctrine.orm.entity_manager');      
 		$repConseil = $em->getRepository('TDN\Bundle\ConseilExpertBundle\Entity\ConseilExpert');
 		if (is_array($panel)) {
 			$_t = array_intersect($panel, array_keys($this->clefs));

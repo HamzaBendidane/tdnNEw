@@ -132,7 +132,7 @@ input[type="submit"] {
 
 @media (max-width: 980px) {
   .bloc-recherche {
-    display: flex;
+    display: none;
     background-color: white;
     justify-content: space-between;
     padding: 0rem 2rem 0.5rem;
@@ -143,7 +143,7 @@ input[type="submit"] {
 
     .reseaux-sociaux {
       width: 50%;
-      display: flex;
+      display: none;
       justify-content: space-between;
     }
   }
@@ -292,9 +292,14 @@ ul.rubriques {
 		overflow-y: none ;
 	}
 }
-
+.invite-newsletter {
+    color: white;
+}
 .navbar-toggle {
-	margin-right : 40px;	
+	  float: left;
+    margin-left: 35px;
+}
+.textaccorche {
 }
  
  #sommaire-home .bloc-bandeau  h3{

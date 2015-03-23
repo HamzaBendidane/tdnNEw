@@ -9,11 +9,14 @@ class PartielsController extends Controller
 
     public function digestHomeAction ($limite, $panel = NULL) {
 
+		$variables['activeParticipe'] = 'Pose une question à une nana';
 		$variables['typeEntite'] = 'question';
-		$variables['titreEntite'] = 'Questions de nanas (sans tabou)';
+		$variables['titreEntite'] = 'Questions de nanas';
 		$variables['messageEmpty'] = 'Aucune question publié sur TDN';
 		$variables['lienSommaire'] = 'Toutes les questions des nanas';
 		$variables['classeEntite'] = 'Causeuse';
+		$variables['key'] = 'articles';
+		$variables['pkey'] = '/demande/question-de-nanas';
     	$variables['recents'] = $this->_getQuestionsRecentes($limite, $panel);
     	$variables['aimees'] = $this->_getQuestionsAimees($limite, $panel);
 
@@ -47,6 +50,7 @@ class PartielsController extends Controller
 		$variables['lienSommaire'] = 'Toutes les questions des nanas';
 		$variables['classeEntite'] = 'Causeuse';
 		$variables['recents'] = $this->_getQuestionsAimees($limite);
+		$variables['key'] = 'articles';
 
         return $this->render('TDNCauseuseBundle:Partiels:questionsPlusAimees.html.twig', $variables);
     }

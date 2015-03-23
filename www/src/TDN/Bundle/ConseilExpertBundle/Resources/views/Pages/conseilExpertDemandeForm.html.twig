@@ -24,7 +24,7 @@
     <form name="demande-conseil-expert" id="formConseil" class="form-utilisateur constraintFile table-content" action="{{ path('ConseilExpert_creer_process') }}" method="post"  {{ form_enctype(form) }}>
       <figure class="avatar col-lg-3">
         <a href="{#{ path('NanaBundle_profil', {'id': TDNDocument.idNana}) }#}">
-          <img src="{{ avatar(nana) }}" alt="{{ nana.username }}" />
+          <img width="50px" src="{{ avatar(nana) }}" alt="{{ nana.username }}" />
         </a>
       </figure>
       <div class="fields col-lg-9">

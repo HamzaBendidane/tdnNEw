@@ -21,7 +21,8 @@ class PublicController extends MainPublicController {
 
 		$channel = $request->query->get('channel');
 		if ($channel === 'ajax') {
-			$response = new Response($this->renderView('TDNDossierRedactionBundle:Partiels:dossiersListe.html.twig', $variables));
+			$response = new Response($this->renderView('TDNRedactionBundle:Partiels:articlesListe.html.twig', $variables));
+
 	        $response->headers->set('Content-Type', 'text/html');
 	        $response->headers->set('Accept-Charset', 'utf-8');
 	        return $response;

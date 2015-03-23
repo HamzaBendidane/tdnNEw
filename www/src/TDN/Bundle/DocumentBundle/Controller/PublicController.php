@@ -220,11 +220,10 @@ class PublicController extends Controller
 
         $rep = $em->getRepository('TDN\Bundle\DocumentBundle\Entity\DocumentRubrique');
         $variables['rubriques'] = $rep->findBy(array('parent' => NULL));
-        $_objRubrique = $rep->findOneBySlug($rubrique);
-        
+ 	$_objRubrique = $rep->findOneBySlug($rubrique);
         $largeurSegment = 4;
         $variables['rubrique'] = $rubrique;
-        $variables['nomRubrique'] = ($_objRubrique instanceof DocumentRubrique) ? $_objRubrique->getTitre() : 'Toutes';
+	$variables['nomRubrique'] = ($_objRubrique)  ? $_objRubrique->getTitre() : 'Toutes';
         $variables['page'] = $page + 1;
         $variables['derniere'] = ceil($variables['totalContenus'] / $longueurPage);
 

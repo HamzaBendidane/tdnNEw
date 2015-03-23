@@ -2,7 +2,7 @@
 	<div class="widget-liste-{{ typeEntite }} bandeau fond-vert row">		
 		<h3 class="titre-icone">{{ titreEntite }}</h3>
 		{% if activeParticipe is defined %}
-		<a href="{#{ path() }#}" class="lien-propos propos-right">{{ activeParticipe }}</a>
+		<a href="{{ pkey }}" class="lien-propos propos-right">{{ activeParticipe }}</a>
 		{% endif %}
 	</div>
 	<div class="hot row">
@@ -12,7 +12,7 @@
 		{% block corpsPublicationsRecentes %}{% endblock %}
 		{% if lienSommaire is defined %}
 		<div class="lienSommaire">
-			<a href="{#{ path(classeEntite.'_sommaire') }#}">{{ lienSommaire }}</a>
+			<a href="/{{ key }}">{{ lienSommaire }}</a>
 		</div>
 		{% endif %}
 	{% endif %}

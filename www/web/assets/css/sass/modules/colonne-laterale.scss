@@ -6,7 +6,7 @@
 		background-color: $violet-tdn;
 
 		@media (max-width: 980px) {
-			background-color : white;	
+			background-color : white;
 		}
 		
 				
@@ -21,6 +21,7 @@
 			
 			@media (max-width: 630px) {
 				width : 80%;
+				display : none;
 			}
 			
 		}
@@ -35,6 +36,10 @@
 			width : 24px;
 			height : 24px;
 			border-radius : 50%;
+			 @media (max-width: 630px) {
+                                display : none;
+                        }
+
 		}
 		
 

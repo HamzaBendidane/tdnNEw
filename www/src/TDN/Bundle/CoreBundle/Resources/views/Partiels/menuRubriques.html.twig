@@ -7,8 +7,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-          
-          </div>
+	</div>
 	<div class="navbar-collapse collapse" id="navbar">
 	<ul class="nav navbar-nav menuRubriques">
 	{% for rubriquePrincipale in princeps %}
@@ -19,7 +18,7 @@
 			<ul class="subMenu menu-masque">
 			{% for subMenu in navigation[menu] %}
 				<li class="itemSousRubrique">
-					<a href="{#{path('Core_sommaire_standard', {'slug': subMenu.slug})}#}">{{ subMenu.titre}}</a>
+					<a href="{{path('Core_sommaire_standard', {'slug': subMenu.slug})}}">{{ subMenu.titre}}</a>
 				</li>
 			{% endfor %}
 			</ul>

@@ -34,7 +34,7 @@ assetic:
     filters:
         cssrewrite: ~
         sass:
-            bin: /usr/local/bin/sass
+            bin: /usr/bin/sass
 
 #swiftmailer:
 #    delivery_address: me@example.com

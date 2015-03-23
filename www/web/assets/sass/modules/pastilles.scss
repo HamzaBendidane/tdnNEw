@@ -1,0 +1,27 @@
+.question-de-nana {
+
+	.stats {
+		text-align: center;
+		font-size: 0.8rem;
+	}
+	
+	.n-reponses {
+		@include sprite-default;
+		@include nombre-votes-grand;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		background-clip: border-box;
+		padding-top: 15px;
+	}
+
+	.n-votes {
+		@include sprite-default;
+		@include nombre-reponses-grand;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		background-clip: border-box;
+		padding-top: 10px;
+	}
+}

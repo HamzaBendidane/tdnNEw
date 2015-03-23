@@ -34,17 +34,14 @@
 
     <route id="Core_sommaire_standard" pattern="/{slug}/sommaire">
         <default key="_controller">TDNCoreBundle:Core:sommaireRubrique</default>
-        <requirement key="slug">a-la-une|beaute|bien-etre|deco|geekette|mode|recettes|sexo-psycho</requirement>
     </route>
 
     <route id="Core_sommaire" pattern="/sommaire/{slug}">
         <default key="_controller">TDNCoreBundle:Core:sommaireRubrique</default>
-        <requirement key="slug">a-la-une|beaute|bien-etre|deco|geekette|mode|recettes|sexo-psycho</requirement>
     </route>
 
     <route id="Core_sommaire_slashed" pattern="/sommaire/{slug}/">
         <default key="_controller">TDNCoreBundle:Core:sommaireRubrique</default>
-        <requirement key="slug">a-la-une|beaute|bien-etre|deco|geekette|mode|recettes|sexo-psycho</requirement>
     </route>
 
     <route id="Document_equipeTDN" pattern="/equipe">

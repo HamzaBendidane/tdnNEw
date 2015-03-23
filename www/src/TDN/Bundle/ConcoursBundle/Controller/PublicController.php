@@ -77,7 +77,7 @@ class PublicController extends DocumentController {
         $rep = $em->getRepository('TDN\Bundle\DocumentBundle\Entity\DocumentRubrique');
         $variables['rubriques'] = $rep->findBy(array('parent' => NULL));
         $_objRubrique = $rep->findOneBySlug($rubrique);
-        
+       die; 
         $largeurSegment = 4;
         $variables['rubrique'] = $rubrique;
         $variables['nomRubrique'] = ($_objRubrique instanceof DocumentRubrique) ? $_objRubrique->getTitre() : 'Toutes';

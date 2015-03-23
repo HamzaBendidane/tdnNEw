@@ -48,10 +48,12 @@
         <default key="_controller">TDNCauseuseBundle:Public:question</default>
     </route>
 
-    <route id="Causeuse_creer" pattern="/demande/question-de-nanas">
+    <route id="CauseuseBundle_creer" pattern="/demande/question-de-nanas">
         <default key="_controller">TDNCauseuseBundle:Public:questionDemande</default>
     </route>
-
+ 	<route id="Causeuse_creer" pattern="/demande/question-de-nanas">
+         <default key="_controller">TDNCauseuseBundle:Public:questionDemande</default>
+             </route>
     <route id="Causeuse_postReponse" pattern="/question-de-nanas/repondre">
         <default key="_controller">TDNCauseuseBundle:Public:reponsePoster</default>
     </route>

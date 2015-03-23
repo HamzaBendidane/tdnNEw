@@ -180,8 +180,8 @@ class PublicController extends MainPublicController {
 			// Pas de promotion automatique en page d'accueil (Slider)
 			$_TDNDocument->setLnPromu(NULL);
 			// Association des rubriques
-			$formRubrique->bindRequest($request);
-			$_TDNDocument->addRubrique($_rubrique->getRubrique());
+			//$formRubrique->bindRequest($request);
+		//	$_TDNDocument->addRubrique($_rubrique->getRubrique());
 
 			// Modification de l'illustration de la question
 			$imageNana = $_TDNDocument->getLnIllustration();

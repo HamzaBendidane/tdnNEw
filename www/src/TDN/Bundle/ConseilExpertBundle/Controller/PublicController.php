@@ -37,7 +37,7 @@ class PublicController extends MainPublicController {
 		$formRubrique = $this->createForm(new ThematiqueType, new Thematique);
 
 		$variables['nana'] = $usr;
-		$variables['titreFormulaire'] = 'Questionne les nanas';
+		$variables['titreFormulaire'] = 'Questionne des experts';
 		$variables['rubrique'] = 'tdn';
 		$variables['form'] = $form->createView();
 		$variables['formRubrique'] = $formRubrique->createView();

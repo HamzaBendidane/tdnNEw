@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class PartielsController extends Controller {
 
-    public function videosRecentesAction($limite, $panel = NULL) {
+    public function videosRecentesAction($limite=10, $panel = NULL) {
 
 		$variables['activeParticipe'] = 'Propose une vidéo';
 		$variables['typeEntite'] = 'video';
@@ -14,8 +14,9 @@ class PartielsController extends Controller {
 		$variables['messageEmpty'] = 'Aucun vidéo publiée sur TDN';
 		$variables['lienSommaire'] = 'Toutes les vidéos';
 		$variables['classeEntite'] = 'Video';
-
-    	// Récupération de l'entity manager qui va nous permettre de gérer les entités.
+		$variables['key'] = 'videos';
+    		$variables['pkey'] = '/videos/proposer';
+	// Récupération de l'entity manager qui va nous permettre de gérer les entités.
 	    $em = $this->get('doctrine.orm.entity_manager');      
 	    $textProcessor = $this->get('tdn.core.textprocessor');      
 
@@ -27,7 +28,7 @@ class PartielsController extends Controller {
 		if (!empty($variables['live'])) {		
 			$hebergeur = $variables['live']->getIdHebergeur();
 			$abstract = $variables['live']->getAbstract();
-			$variables['videoAbstract'] = $textProcessor->flattenAtSeparator($abstract, 120);
+			$variables['videoAbstract'] = $textProcessor->flattenAtSeparator($abstract, 300);
 			$variables['videoAbstract'] .= $variables['videoAbstract'] === $abstract ? '' : ' (&hellip;&nbsp;suite)';
 			switch ($hebergeur) {
 				case 'dailymotion':

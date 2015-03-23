@@ -1,0 +1,14 @@
+@each $reseau, $abscisse in (
+	fb: $facebook-x,
+	tw: $twitter-x,
+	ig: $instagram-x,
+	pi: $pinterest-x,
+	yt: $youtube-x,
+	gplus: $google-x,
+	app: $app-x
+	) 
+{
+	.#{$reseau} {
+		background-position: $abscisse $reseaux-sociaux-y;
+	}
+}

@@ -3,7 +3,7 @@
 namespace TDN\Bundle\RedactionBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\HttpFoundation\Response;
 use TDN\Bundle\DocumentBundle\Controller\PublicController as MainPublicController;
 use TDN\Bundle\DocumentBundle\Entity\DocumentRubrique;
 use TDN\Bundle\CommentaireBundle\Entity\Commentaire;
@@ -90,7 +90,6 @@ class PublicController extends MainPublicController {
 	public function sommaireAction ($theme = '', $rubrique = '') {
 
         $request = $this->get('request');
-
 		$variables = $this->makeSommaire($rubrique, 'TDN\Bundle\RedactionBundle\Entity\Article', 'ARTICLE_PUBLIE');
 
 		$channel = $request->query->get('channel');

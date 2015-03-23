@@ -1,0 +1,34 @@
+@mixin boite-arrondie-haut ($courbure) {
+	border-radius: $courbure $courbure 0 0;
+}
+
+@mixin boite-arrondie-bas ($courbure) {
+	border-radius: 0 0 $courbure $courbure;
+}
+
+@mixin icone-standard {
+	height: 31px;
+	width: 35px;
+}
+
+@mixin sprite-question-icone {
+	@include sprite($icone-question-bulle-hauteur, $icone-question-bulle-largeur);
+}
+
+
+@mixin gradient-horz-monochrome-fade ($r, $v, $b) {
+	/* FF3.6+ */
+	background: -moz-linear-gradient(left,  rgba($r,$v,$b,1) 0%, rgba($r,$v,$b,0.38) 79%, rgba($r,$v,$b,0.08) 100%); 
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba($r,$v,$b,1)), color-stop(79%,rgba($r,$v,$b,0.38)), color-stop(100%,rgba($r,$v,$b,0.08)));
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(left,  rgba($r,$v,$b,1) 0%,rgba($r,$v,$b,0.38) 79%,rgba($r,$v,$b,0.08) 100%);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(left,  rgba($r,$v,$b,1) 0%,rgba($r,$v,$b,0.38) 79%,rgba($r,$v,$b,0.08) 100%);
+	/* IE10+ */
+	background: -ms-linear-gradient(left,  rgba($r,$v,$b,1) 0%,rgba($r,$v,$b,0.38) 79%,rgba($r,$v,$b,0.08) 100%);
+	/* W3C */
+	background: linear-gradient(to right,  rgba($r,$v,$b,1) 0%,rgba($r,$v,$b,0.38) 79%,rgba($r,$v,$b,0.08) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b0083', endColorstr='#149b0083',GradientType=1 ); /* IE6-9 */
+
+}

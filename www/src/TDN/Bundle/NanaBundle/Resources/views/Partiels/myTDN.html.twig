@@ -30,20 +30,20 @@
 			<ul class="groupe-options col-lg-4">
 				{% if is_granted('ROLE_USER') %}
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('ConseilExpert_creer') }#}">Pose une question à un expert</a>
+					<a class='headerLink' href="{{ path('ConseilExpert_creer') }}">Pose une question à un expert</a>
 				</li>
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('CauseuseBundle_creer') }#}">Pose une question aux nanas</a>
+					<a class='headerLink' href="{{ path('CauseuseBundle_creer') }}">Pose une question aux nanas</a>
 				</li>
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('Video_proposer') }#}">Propose une vidéo</a>
+					<a class='headerLink' href="{{ path('Video_proposer') }}">Propose une vidéo</a>
 				</li>
 				{% endif %}
 			</ul>
 			<ul class="groupe-options col-lg-4">
 				{% if is_granted('ROLE_USER') %}
 				<li class="granted-options">
-					<a href="{#{ path('Concours_sommaire') }#}">Voir les jeux-concours</a>
+					<a href="{{ path('Concours_sommaire') }}">Voir les jeux-concours</a>
 				</li>
 				<!--li class="granted-options">Jouer à un quiz</li-->
 				<li class="granted-options">
@@ -54,23 +54,23 @@
 			<ul class="groupe-options col-lg-4">
 				{% if is_granted('ROLE_JOURNALISTE') %}
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('RedactionBundle_articleAdd') }#}">Ecrire un article</a>
+					<a class='headerLink' href="{{ path('RedactionBundle_articleAdd') }}">Ecrire un article</a>
 				</li>
 				{% endif %}
 				{% if is_granted('ROLE_EXPERT') %}
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('ConseilExpert_logStatut', {'statut' : '2'}) }#}">Mes questions en attente</a>
+					<a class='headerLink' href="{{ path('ConseilExpert_logStatut', {'statut' : '2'}) }}">Mes questions en attente</a>
 				</li>
 				{% endif %}
 				{% if is_granted('ROLE_EXPERT') %}
 				<li class="granted-options">
-					<a class='headerLink' href="{#{ path('Core_adminDashboard') }#}">Administration</a>
+					<a class='headerLink' href="{{ path('Core_adminDashboard') }}">Administration</a>
 				</li>
 				{% endif %}
 			</ul>
 	{% else %}
 		<h3>Connecte-toi sur TDN</h3>
-		{#% render(controller("TDNNanaBundle:Security:blockLogin", {'redirect_url': path('NanaBundle_myProfil')})) %#}
+		{% render(controller("TDNNanaBundle:Security:blockLogin", {'redirect_url': path('NanaBundle_myProfil')})) %}
 		{% render(controller("TDNNanaBundle:Security:blockLogin", {'redirect_url': '#'})) %}
 		<p class="inviteInscription">
 			<a href="{#{ path('Nana_passwordResetS1') }#}" class="lienFleche">J'ai perdu mes identifiants ?</a> 

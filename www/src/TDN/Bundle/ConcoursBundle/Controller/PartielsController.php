@@ -19,7 +19,8 @@ class PartielsController extends Controller {
 		$variables['messageEmpty'] = 'Aucun jeu-concours publié sur TDN';
 		$variables['lienSommaire'] = 'Tous les jeux-concours';
 		$variables['classeEntite'] = 'Concours';
-
+		$variables['key'] = 'articles';
+	
 	    $em = $this->get('doctrine.orm.entity_manager');      
 		$modele = $em->getRepository('TDN\Bundle\ConcoursBundle\Entity\Concours');
 		if (is_array($panel)) {
