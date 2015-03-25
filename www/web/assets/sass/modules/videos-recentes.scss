@@ -11,9 +11,9 @@
 }
 
 #videos-recentes .scene {
-	position: absolute;
-	top: 40px;
-	left: 325px;
+	/* position: absolute; */
+	/* top: 40px; */
+	/* left: 325px; */
 
 	.rubriqueMarqueur:before {
 		height: 80px;
@@ -21,9 +21,9 @@
 	}
 
 	.lecteur {
-		left: 7px;
+		/*left: 7px; */
 		position:relative;
-		top: 5px;
+		/* top: 5px; */
 		z-index:10;
 	}
 }

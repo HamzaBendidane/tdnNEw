@@ -77,15 +77,45 @@ input[type="submit"] {
       border: none;
 }
 
+.ariane {
+		background-color : white;
+		/* border-top : 2px solid $violet-tdn; */
+		display : block;
+		float : left ;
+		position : relative;
+		font-size : 14px;
+		padding : 12px 0 11px 10px;
+		/* width : 63%; */
+		left : 20px;
+
+		.arianeSep {
+			color : $violet-tdn;				
+		}
+		
+		.arianeCourant,.arianeSep {
+			font-weight : bold ;	
+		}
+		
+		@media (max-width: 980px) {
+			left : inherit;
+			/* width : 100%; */
+			float : inherit;
+			border-top : inherit;			
+		}
+}
+
+
+
 @media (min-width: 980px) {
   .bloc-recherche {
     float: right;
     background-color: white;
     text-align: center;
-    border-top: 2px solid #9b0083;
+    /*border-top: 2px solid #9b0083;*/
     padding-left: 10px;
-    width: 33.8%;
-
+    width: 31.8%;
+	margin-right : 12px; 
+	
     .recherche-rapide {
       margin-bottom: 1rem;
     }
@@ -108,7 +138,7 @@ input[type="submit"] {
     padding: 0rem 2rem 0.5rem;
 
     .recherche-rapide {
-      width: 50%;
+      width: 80%;
     }
 
     .reseaux-sociaux {
@@ -117,10 +147,31 @@ input[type="submit"] {
       justify-content: space-between;
     }
   }
+  
+
+  
 }
+	@media (max-width: 630px) {
+		.bloc-recherche {	
+			display : block;	
+			width : inherit;
+			text-align : center;
+			
+			.recherche-rapide {
+     			 width:100%;
+				 display:block;
+    		}
+			
+			.reseaux-sociaux {
+				width: 100%;
+				margin-top : 20px;
+				justify-content: space-between;
+			}
+		}
+	}
 
 .scene {
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 .point {
@@ -157,7 +208,7 @@ ul.rubriques {
 
 #colonne-principale {
   position: relative;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .standard-etiquette {
@@ -168,3 +219,85 @@ ul.rubriques {
   overflow: auto;
   overflow: auto;
 }
+
+.separationBlockFullWidth {
+	background-color : $blanc;
+
+	.separationTop {
+		margin : 0 auto;
+		width : 97%;
+		height : 2px;
+		background-color : $violet-tdn;
+	}
+	
+}
+
+.bloc-plus-lus {
+	margin-bottom : 20px;	
+}
+
+/* Overriding Bootstrap RUlles */
+
+.navbar-default {
+	background-border : inherit;	
+}
+
+.navbar {
+  position: relative;
+  min-height: inherit;
+  margin-bottom: inherit;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: none;
+    margin: 0;
+  }
+  
+}
+
+.navbar {
+    border-radius: 0;
+  }
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0;
+  }
+}
+
+.container-fluid {
+  padding-right: inherit;
+  padding-left: inherit;
+  margin-right: inherit;
+  margin-left: inherit;
+}
+
+
+.navbar-collapse {
+  max-height: inherit;
+  padding-right: inherit;
+  padding-left: inherit;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 0;
+  box-shadow:inherit;
+}
+
+/* modified in bootstrap.css 3667 */ 
+.navbar-collapse.in {
+  overflow-y: none;
+  
+  @media (min-width: 768px) { 
+		overflow-y: none ;
+	}
+}
+
+.navbar-toggle {
+	margin-right : 40px;	
+}
+ 
+ #sommaire-home .bloc-bandeau  h3{
+	 font-size : 1.2rem;
+ }
+ 

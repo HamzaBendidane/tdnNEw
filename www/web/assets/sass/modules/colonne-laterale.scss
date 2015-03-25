@@ -1,20 +1,44 @@
 .bloc-recherche {
+	 
 
 	.recherche-rapide {
 		@include boite-arrondie-bas(10px);
 		background-color: $violet-tdn;
 
+		@media (max-width: 980px) {
+			background-color : white;	
+		}
+		
+				
+
 		form#recherche {
 			font-size: 0.8rem;
 			padding: 2px 0 4px;
 		}
-
+		
+		.rechercheRapideInput {
+			width : 60%;	
+			
+			@media (max-width: 630px) {
+				width : 80%;
+			}
+			
+		}
+		
+		
 		.submitter {
 			@include sprite-default;
 			@include bouton-loupe;
-			margin-left: 10px;
+			margin-left: 5px;
 			vertical-align: middle;
+			background-color: $violet-tdn;
+			width : 24px;
+			height : 24px;
+			border-radius : 50%;
 		}
+		
+
+		
 	}
 
 	.reseaux-sociaux {
@@ -53,6 +77,9 @@
 			@include sprite-default;
 			@include bouton-fleche-droite-blanc;
 			vertical-align: middle;
+			width : 24px;
+			height : 24px;	
+			border-radius : 50%;
 		}
 
 }
@@ -83,4 +110,20 @@
 #bloc-facebook-friends,
 #twitter-widget {
 	text-align: center;
+}
+
+#bloc-facebook-friends,
+#twitter-widget {
+	margin-bottom : 15px;	
+}
+
+#side-pub {
+	border-top-left-radius : 15px;
+	border-top-right-radius : 15px; 
+	background-color : #e9f9f8; 
+	padding : 16px;	
+}
+
+#side-pub img {
+	width : 100%;	
 }

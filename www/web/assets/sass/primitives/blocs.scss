@@ -18,7 +18,7 @@
 }
 
 .par-3,
-#.par-videos,
+.par-videos,
 .par-concours {
 	display: inline-block;
 	margin: 0 0.5rem;
@@ -29,7 +29,6 @@
 @media (min-width: 768px) {
 	.par-2,
 	.par-articles,
-	.par-videos,
 	.par-conseils,
 	.par-questions {
 		display: inline-block;
@@ -41,7 +40,6 @@
 @media (max-width: 768px) {
 	.par-2,
 	.par-articles,
-	.par-videos,
 	.par-conseils,
 	.par-questions {
 		display: inline-block;

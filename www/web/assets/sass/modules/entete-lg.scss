@@ -20,6 +20,10 @@
 		padding: 0.3rem 0px;
 		margin: 0px 20px;
 		border-bottom: 1px solid #CCC;
+		
+		@media screen and (max-width: 630px) {
+				display : block;
+		}
 	}
 
 	.itemContenu {
@@ -67,7 +71,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 979px)  {
+@media screen and (min-width: 768px) and (max-width: 1199px)  {
 	#contenusNavigation {
 		.itemContenu {
 			font-size: 0.8rem;
@@ -80,7 +84,7 @@
 	}
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1200px) {
 	#contenusNavigation {
 		.itemContenu {
 			font-size: 1rem;
@@ -88,6 +92,7 @@
 
 		.lienContenu:before {
 			display: inline-block;
+			margin-right : 5px;
 		}
 	}
 }
@@ -113,6 +118,26 @@
 		&:after {
 			clear:both;
 		}
+		
+		@media screen and (max-width: 740px) {
+			padding : 0 20px;	
+		}
+		
+		@media screen and (max-width: 630px) {
+			display : block;
+			
+			&:before,
+			&:after {
+			content: "";
+			display: block;
+				}
+
+			&:after {
+				clear:both;
+			}
+		}
+
+
 
 		@each $rubrique, $couleur in (
 			beaute: $beauteTexte, 
@@ -128,18 +153,155 @@
 				background-color: $couleur; 
 			}
 		}
+	
+		
 
 		.sexo-psycho .subMenu {
-			left: -152px;
+			left: -155px;
 		}
+		
+			
 
 		.recettes .subMenu {
-			left: -212px;
+			left: -216px;
 		}
+		
+		@media screen and (max-width: 1211px) {
+			.mode .subMenu {
+					left : -461px;	
+				}
+				
+				.bien-etre .subMenu {
+					left : -309px;	
+					
+				}
+			
+				.sexo-psycho .subMenu {
+					left: -200px;
+				}
+			
+				
+	
+				.recettes .subMenu {
+					left: -264px;
+				}	
+		}
+		
+		
+		
+	 @media screen and (max-width: 1013px) {
+				.a-la-une .subMenu {
+					left : 16px;	
+				}
+				
+				.beaute .subMenu {
+					left : 16px;	
+				}
+				
+				.geekette .subMenu {
+					left : 16px;	
+				}
+				
+				.deco .subMenu {
+					left : 16px;	
+				}
+				
+				.mode .subMenu {
+					left : -431px;	
+				}
+				
+				.bien-etre .subMenu {
+					left : -276px;	
+					
+				}
+			
+				.sexo-psycho .subMenu {
+					left: -172px;
+				}
+			
+				
+	
+				.recettes .subMenu {
+					left: -249px;
+				}
+		}  
+		
+		
+	 
+		
+		
+		
+		
+		@media screen and (max-width: 994px) {
+				.a-la-une .subMenu ,
+				.beaute .subMenu, 
+				.geekette .subMenu,
+				.deco .subMenu {
+					left : 16px;
+				}
+				
+			
+				
+				.mode .subMenu {
+					left : -230px;	
+				}
+				
+				.bien-etre .subMenu {
+					left : -276px;	
+					
+				}
+			
+				.sexo-psycho .subMenu {
+					left: -172px;
+				}
+				
+	
+				.recettes .subMenu {
+					left: -249px;
+				}
+		}
+		
+		@media screen and (max-width: 630px) {
+				.recettes .subMenu {
+					left: 16px;
+				}
+		}
+		
+		@media screen and (max-width: 590px) { 
+			.a-la-une .subMenu ,
+				.beaute .subMenu, 
+				.geekette .subMenu,
+				.deco .subMenu,
+				.mode .subMenu,
+				.bien-etre .subMenu,
+				.sexo-psycho .subMenu,
+				.recettes .subMenu  {
+					left : inherit;
+				}
+		}
+		
 	}
 
 	.mainMenuLabel {
 		font-size: 1.3rem;
+	}
+	
+	@media screen and (max-width: 1199px) {
+			.mainMenuLabel {
+			font-size: 1.3rem;
+		}	
+	}
+	
+	@media screen and (max-width: 1192px)  {
+		 .mainMenuLabel {
+			 font-size : 1.1rem;
+		}
+	}
+	
+	@media screen and (max-width: 1000px) {
+		 .mainMenuLabel {
+				font-size : 0.9rem; 
+		 }
 	}
 
 	.itemRubrique {
@@ -149,7 +311,25 @@
 		position: relative;
 		width: calc(12.5% - 0.24rem);
 		text-align: center;
+		
+		
+		
 	}
+	
+	@media screen and (max-width: 590px) { 
+		.itemRubrique {
+			display : block;
+			padding : 0.5rem 0;
+				
+		}
+	}
+	
+	@media screen and (max-width: 1000px) {
+			.itemRubrique {
+				padding: 0.5rem;
+				width : inherit;
+			}
+		}
 
 	.subMenu {
 		border-bottom-right-radius: 6px;
@@ -161,6 +341,17 @@
 		position: absolute;
 		white-space: nowrap;
 		z-index: 400;
+		
+		@media screen and (max-width: 590px) { 
+			 	margin : 0 auto;	
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;			
+		 		white-space : inherit;
+				position : relative;
+				width : 95%;	
+		}
+
+
 
 		&.menu-masque {
 			visibility: hidden;
@@ -168,17 +359,31 @@
 			opacity: 0;
 			top: 35px;
 			-webkit-transition-property: top, max-height, opacity;
-			-webkit-transition-duration: 0.4s, 0.1s, 0.4s;
+			-webkit-transition-duration: 0.4s, 0.1s, 0.4s;		
+		
 		}
 
 		&.menu-visible {
 			visibility: visible;
 			max-height: 41px;
 			opacity: 1;
-			top: 41px;
+			top: 40px;
 			-webkit-transition-property: top, max-height, opacity;
 			-webkit-transition-duration: 0.4s, 0.1s, 0.4s;
 		}
+
+		@media screen and (max-width: 1199px)  {
+				 &.menu-visible {
+					 top: 37px;
+				}
+			}
+		@media screen and (max-width: 590px) { 
+				&.menu-visible {
+					 top: inherit;
+					 max-height:inherit;
+				}
+		}
+		
 
 		.itemSousRubrique {
 			color: $blanc;
@@ -190,6 +395,9 @@
 				color: inherit;
 			}
 		}
+		
+		
+
 
 		.itemSousRubrique:not(:last-child):after {
 			content: "•";
@@ -198,5 +406,24 @@
 			padding-left: 6px;
 			vertical-align: middle;
 		}
+		
+			@media screen and (max-width: 1199px) {
+				.itemSousRubrique {
+				font-size: 1.3rem;
+			}	
+		}
+		
+		@media screen and (max-width: 1192px)  {
+			 .itemSousRubrique {
+				 font-size : 1.1rem;
+			}
+		}
+		
+		@media screen and (max-width: 1000px) {
+			 .itemSousRubrique {
+					font-size : 0.9rem; 
+			 }
+		}
+		
 	}
 }
